@@ -63,7 +63,6 @@ export default function HomeHero() {
     }, 1);
 
     return () => {
-      console.log("this run");
       setComponentRender({
         component: null,
       });
@@ -127,6 +126,7 @@ export default function HomeHero() {
             controls
             autoPlay
             muted
+            loop
             controlsList="nodownload noplaybackrate"
             disablePictureInPicture
           />

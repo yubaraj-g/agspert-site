@@ -1,13 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
-import { TypographyH2 } from "@/components/typography";
 import { Button } from "@/components/ui/button";
 
 export default function NavDesktop() {
   return (
     <>
       <Link href={"/"}>
-        <TypographyH2>LOGO</TypographyH2>
+        <Image src="/agspert-logo.png" alt="agspert" width="200" height="120" />
       </Link>
 
       <nav>

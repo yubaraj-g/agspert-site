@@ -1,9 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 import { Backward, Hamburger } from "@/components/icons";
-import { TypographyH2, TypographyH3 } from "@/components/typography";
+import { TypographyH3 } from "@/components/typography";
 import { Button } from "@/components/ui/button";
 
 import { listType, navList } from "../list";
@@ -17,7 +18,7 @@ export default function NavMobile() {
   return (
     <>
       <Link href={"/"}>
-        <TypographyH2>LOGO</TypographyH2>
+        <Image src="/agspert-logo.png" alt="agspert" width="200" height="120" />
       </Link>
 
       <Button variant="ghost" onClick={() => setIsNav((prev) => !prev)}>
@@ -37,7 +38,8 @@ export default function NavMobile() {
         >
           <div className="flex justify-between items-center">
             <Link href={"/"} onClick={() => setIsNav(false)}>
-              <TypographyH2>LOGO</TypographyH2>
+              {/* <TypographyH2>LOGO</TypographyH2> */}
+              <Image src="/agspert-logo.png" alt="agspert" width="200" height="120" />
             </Link>
 
             <Button variant="ghost" onClick={() => setIsNav(false)}>
