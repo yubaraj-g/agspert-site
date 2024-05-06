@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import useScreenSize from "@/hooks/use-screen-size";
 
@@ -16,9 +17,14 @@ export default function Header() {
 
   return (
     <Fragment>
-      <div className="min-h-32 flex items-center justify-between">
+      <motion.div
+        initial={{ y: -40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeInOut", duration: 0.75 }}
+        className="min-h-28 flex items-center justify-between w-full"
+      >
         {isDesktop ? <NavDesktop /> : <NavMobile />}
-      </div>
+      </motion.div>
     </Fragment>
   );
 }
