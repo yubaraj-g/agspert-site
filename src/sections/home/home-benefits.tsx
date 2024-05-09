@@ -8,7 +8,7 @@ export default function HomeBenefits() {
     <div className="w-full min-h-96 pt-4" id="benefits">
       {/* <TypographyH2>What does AGSpeak provide?</TypographyH2> */}
       <TypographyH2>
-        Value Proposition: <span className="text-primary underline">What's in it for you?</span>
+        Value Proposition: <span className="text-primary underline">What&apos;s in it for you?</span>
       </TypographyH2>
 
       <div className="px-0 py-4">
