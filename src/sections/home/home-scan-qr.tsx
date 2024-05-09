@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { TypographyH2 } from "@/components/typography";
+import { TypographyH1 } from "@/components/typography";
 import Template from "@/layouts/template";
 
 export default function HomeScanQR() {
@@ -15,7 +15,7 @@ export default function HomeScanQR() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.4, delay: 0.15 }}
         >
-          <TypographyH2>Let&apos;s go on a journey, please scan QR</TypographyH2>
+          <TypographyH1>Let&apos;s go on a journey, please scan QR</TypographyH1>
         </motion.div>
 
         <motion.div
