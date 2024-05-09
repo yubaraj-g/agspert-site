@@ -119,9 +119,9 @@ export default function HomeHero() {
           <Button className="w-fit rounded-none shadow-xl rounded-tl-xl rounded-br-xl">Request Demo</Button>
         </div>
 
-        <div className="flex w-full lg:w-1/2 min-h-44 h-fit lg:min-h-72 lg:h-fit justify-center items-center shadow-2xl">
+        <div className="flex w-full lg:w-1/2 h-fit lg:min-h-72 lg:h-fit justify-center items-center shadow-2xl bg-transparent rounded-3xl">
           <video
-            className="rounded-tl-3xl rounded-br-3xl"
+            className="rounded-tl-3xl rounded-br-3xl h-full"
             src="/video/Intro-Video-AgSpeak.mp4"
             controls
             autoPlay

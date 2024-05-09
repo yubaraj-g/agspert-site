@@ -28,7 +28,7 @@ export default function NavMobile() {
       <div
         className={cn(
           "fixed top-0 h-dvh w-screen transition-all duration-700 grid place-items-end z-40 backdrop-blur-sm",
-          isNav ? "right-0 bg-black/70" : "-right-[1200px] bg-black/0"
+          isNav ? "right-0 bg-black/50" : "-right-[1200px] bg-black/0"
         )}
         onClick={() => setIsNav(false)}
       >
@@ -39,7 +39,7 @@ export default function NavMobile() {
           <div className="flex justify-between items-center">
             <Link href={"/"} onClick={() => setIsNav(false)}>
               {/* <TypographyH2>LOGO</TypographyH2> */}
-              <Image src="/agspert-logo.png" alt="agspert" width="200" height="120" />
+              <Image src="/images/agspert-logo.png" alt="agspert" width="200" height="120" />
             </Link>
 
             <Button variant="ghost" onClick={() => setIsNav(false)}>
@@ -49,12 +49,28 @@ export default function NavMobile() {
 
           <div className="flex flex-col gap-4 mt-4">
             {LIST.map((item, index) => (
-              <Link href={item.link} key={`nav-item-${index}`} onClick={() => setIsNav(false)}>
-                <div className="bg-red-50 py-4">
+              <Link
+                href={item.link}
+                key={`nav-item-${index}`}
+                onClick={() => setIsNav(false)}
+                className="hover:text-primary transition-all"
+              >
+                <div className="py-2">
                   <TypographyH3>{capitalizeWords(item.name)}</TypographyH3>
                 </div>
               </Link>
             ))}
+
+            {/* <div className="relative">
+              <Link href={"#"}>
+                <Button className="w-fit rounded-none shadow-xl rounded-tl-xl rounded-br-xl">
+                  Our Products
+                </Button>
+              </Link>
+            </div> */}
+            <Button className="w-fit rounded-none shadow-xl rounded-tl-xl rounded-br-xl">
+              Request Demo
+            </Button>
           </div>
         </div>
       </div>
