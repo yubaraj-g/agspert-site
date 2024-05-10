@@ -30,9 +30,19 @@ export default function AboutView() {
   return (
     <Template>
       <section className="min-h-dvh flex flex-col items-center w-full gap-8">
-        <Template>
-          <div className="h-32 lg:h-64 flex items-center text-primary">
-            <TypographyH1>About Us</TypographyH1>
+        <Template className="w-full">
+          <div className="relative h-32 lg:h-80 w-full flex justify-center items-center text-primary overflow-hidden">
+            <div
+              className="w-fit z-10 p-8"
+              style={{
+                background: "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%)",
+              }}
+            >
+              <TypographyH1>About Us</TypographyH1>
+            </div>
+            <div className="absolute w-full left-0 top-0 z-0 opacity-50">
+              <img src="/images/about-agsperts.jpeg" alt="about agsperts" className="w-full" />
+            </div>
           </div>
         </Template>
         <Template>
