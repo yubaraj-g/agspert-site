@@ -25,7 +25,10 @@ export default function NavDesktop() {
       <nav>
         <ul className="flex gap-4 items-center">
           <li>
-            <Link href={"#about-us"}>About Us</Link>
+            <Link href={"/value-chain"}>Value Chain</Link>
+          </li>
+          <li>
+            <Link href={"/about-us"}>About Us</Link>
           </li>
           <li className="relative">
             <Link href={"#"}>

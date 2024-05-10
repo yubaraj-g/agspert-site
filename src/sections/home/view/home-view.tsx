@@ -34,6 +34,10 @@ export default function HomeView() {
         </Template> */}
 
         <Template>
+          <HomeScanQR />
+        </Template>
+
+        <Template>
           <HomePartners />
         </Template>
 
@@ -48,10 +52,6 @@ export default function HomeView() {
         {/* <Template>
           <HomeAbout />
         </Template> */}
-
-        <Template>
-          <HomeScanQR />
-        </Template>
 
         <Template>
           <HomeContact />

@@ -6,12 +6,12 @@ export type listType = {
 export const navList: listType[] = [
   {
     name: "about us",
-    link: "#about-us",
+    link: "/about-us",
   },
-  // {
-  //   name: "contact us",
-  //   link: "#contact-us",
-  // },
+  {
+    name: "Value Chain",
+    link: "/value-chain",
+  },
   {
     name: "mobile app",
     link: "https://play.google.com/store/apps/details?id=com.agspeak.agspert",
