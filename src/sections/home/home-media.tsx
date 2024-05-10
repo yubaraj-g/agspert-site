@@ -14,7 +14,7 @@ export default function HomeMedia() {
   const data: PartnersType[] = [...support];
 
   return (
-    <div className="w-full flex flex-col gap-4 min-h-36 lg:h-fit pt-4">
+    <div className="w-full flex flex-col items-center gap-4 min-h-36 lg:h-fit pt-4">
       <TypographyH2>Supported By</TypographyH2>
 
       <div className="flex grow w-full">

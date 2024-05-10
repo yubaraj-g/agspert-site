@@ -7,10 +7,17 @@ import { TypographyH1 } from "@/components/typography";
 import Template from "@/layouts/template";
 
 import useScreenSize from "@/hooks/use-screen-size";
+import { useEffect, useState } from "react";
 
 export default function HomeScanQR() {
   const isDesktop = useScreenSize();
-  
+
+  const [desk, setDesk] = useState(false);
+
+  useEffect(() => {
+    setDesk(isDesktop);
+  }, [isDesktop]);
+
   return (
     <Template>
       <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-24 min-h-96 lg:h-[600px] pt-12">
@@ -28,7 +35,11 @@ export default function HomeScanQR() {
           transition={{ ease: "easeInOut", duration: 0.75, delay: 0.3 }}
         >
           <div className="flex grow rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl w-[250px] h-[175px] lg:w-[750px] lg:h-[450px]">
-            {isDesktop ? <Image src="/images/scan-qr.jpeg" alt="scan qr" width={750} height={450} /> : <Image src="/images/scan-qr.jpeg" alt="scan qr" width={250} height={175} />}
+            {desk ? (
+              <Image src="/images/scan-qr-3.jpeg" alt="scan qr" width={750} height={450} />
+            ) : (
+              <Image src="/images/scan-qr-3.jpeg" alt="scan qr" width={250} height={175} />
+            )}
           </div>
         </motion.div>
       </div>
