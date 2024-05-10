@@ -23,8 +23,8 @@ export default function HomeScanQR() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.75, delay: 0.3 }}
         >
-          <div className="flex grow rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">
-            <Image src="/images/scan-qr.jpg" alt="scan qr" width={600} height={300} />
+          <div className="flex grow rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl w-[600px] h-[350px]">
+            <Image src="/images/scan-qr.jpeg" alt="scan qr" width={600} height={500} objectFit="cover" />
           </div>
         </motion.div>
       </div>
