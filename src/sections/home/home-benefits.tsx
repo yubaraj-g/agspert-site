@@ -31,7 +31,7 @@ export default function HomeBenefits() {
   return (
     <div className="w-full min-h-96 pt-4 flex flex-col items-center" id="benefits">
       {/* <TypographyH2>What does AGSpeak provide?</TypographyH2> */}
-      <TypographyH2>What&apos;s in it for you?</TypographyH2>
+      {/* <TypographyH2>What&apos;s in it for you?</TypographyH2> */}
 
       <div className="px-0 py-4 flex justify-center mt-8 max-w-full">
         {/* <CustomCarousel data={BENEFITS} /> */}

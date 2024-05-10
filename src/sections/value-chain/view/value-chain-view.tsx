@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { TypographyH1, TypographyH2, TypographyH4, TypographyP } from "@/components/typography";
 import Template from "@/layouts/template";
+import { Separator } from "@/components/ui/separator";
 
 function Section({ children }: { children: React.ReactNode }) {
   return <section className="flex flex-col items-center gap-6 w-full mt-10">{children}</section>;
@@ -11,11 +12,11 @@ export default function ValueChainView() {
   return (
     <>
       <Template>
-        <section className="w-full flex flex-col items-center">
-          <TypographyH1 className="text-primary">Agspeak - Value Chain</TypographyH1>
+        <section className="w-full flex flex-col items-center overflow-hidden">
+          <TypographyH1 className="text-primary text-center">Agspeak - Value Chain</TypographyH1>
 
           <Section>
-            <TypographyH2>Agri Value Chain:</TypographyH2>
+            <TypographyH2 className="text-primary">Agri Value Chain:</TypographyH2>
 
             <TypographyH4>Blockchain Traceability for Agriculture - </TypographyH4>
 
@@ -65,8 +66,8 @@ export default function ValueChainView() {
             <TypographyP>
               Agspeak offers a tracking system specifically designed for the agriculture industry.
               It uses blockchain technology, which is like a super secure record book, to track food
-              every step of the way, from when it's just a tiny sprout to when it lands on your
-              plate. This system helps everyone involved in getting food to know exactly what's
+              every step of the way, from when it&apos;s just a tiny sprout to when it lands on your
+              plate. This system helps everyone involved in getting food to know exactly what&apos;s
               going on and ensures that the food is safe, produced sustainably, and meets all the
               regulations. Agspeak basically empowers everyone in the food chain and creates a
               win-win situation for both farmers and consumers by guaranteeing the quality and
@@ -99,8 +100,8 @@ export default function ValueChainView() {
               <li>
                 <strong>Immutable:&nbsp;</strong>
                 <span>
-                  Once information is entered into Agspeak, it can't be changed. This ensures
-                  everything is accurate and can't be tampered with.
+                  Once information is entered into Agspeak, it can&apos;t be changed. This ensures
+                  everything is accurate and can&apos;t be tampered with.
                 </span>
               </li>
 
@@ -153,8 +154,10 @@ export default function ValueChainView() {
             </ul>
           </Section>
 
+          <Separator className="mt-10" />
+
           <Section>
-            <TypographyH2>Dairy Value Chain:</TypographyH2>
+            <TypographyH2 className="text-primary">Dairy Value Chain:</TypographyH2>
             <TypographyH4>Blockchain Traceability for the Dairy Value Chain - </TypographyH4>
             <TypographyP>
               Introducing our traceability solution designed to ensure milk purity with zero
@@ -228,8 +231,8 @@ export default function ValueChainView() {
               <li>
                 <strong>Immutable:&nbsp;</strong>
                 <span>
-                  Once information is entered into Agspeak, it can't be changed. This ensures
-                  everything is accurate and can't be tampered with.
+                  Once information is entered into Agspeak, it can&apos;t be changed. This ensures
+                  everything is accurate and can&apos;t be tampered with.
                 </span>
               </li>
 
@@ -300,8 +303,10 @@ export default function ValueChainView() {
             </ul>
           </Section>
 
+          <Separator className="mt-10" />
+
           <Section>
-            <TypographyH2>Livestock Value Chain:</TypographyH2>
+            <TypographyH2 className="text-primary">Livestock Value Chain:</TypographyH2>
             <TypographyH4>Blockchain Traceability for the Livestock Value Chain - </TypographyH4>
 
             <TypographyP className="!m-0">
@@ -332,7 +337,7 @@ export default function ValueChainView() {
                 <strong>Lack of solution to digitize the entire supply chain - </strong>
                 <br />
                 The current methods for managing the supply chain are either unverifiable or
-                susceptible to tampering. There isn't a single authoritative source available to
+                susceptible to tampering. There isn&apos;t a single authoritative source available to
                 effectively manage and control the entire supply chain.
               </TypographyP>
 
@@ -341,7 +346,7 @@ export default function ValueChainView() {
               </TypographyH4>
               <TypographyP className="!m-0">
                 Agspeak offers a revolutionary blockchain-based platform for tracking livestock from
-                farm to fork. This system verifies everything, from the animal's origin and diet to
+                farm to fork. This system verifies everything, from the animal&apos;s origin and diet to
                 its antibiotic and heavy metal exposure. You can even track the processing and
                 distribution stages. This ensures food safety, regulatory compliance, and gives you
                 complete transparency throughout the supply chain.
@@ -416,7 +421,7 @@ export default function ValueChainView() {
               <li>
                 <strong>Digital Supply Chain Footprint:&nbsp;</strong>
                 <span>
-                  End-to-end transparency establishes a digital record of the product's journey,
+                  End-to-end transparency establishes a digital record of the product&apos;s journey,
                   opening up new opportunities for farmers, such as premium markets or access to
                   financing.
                 </span>
@@ -424,8 +429,10 @@ export default function ValueChainView() {
             </ul>
           </Section>
 
+          <Separator className="mt-10" />
+
           <Section>
-            <TypographyH2>Poultry Value Chain:</TypographyH2>
+            <TypographyH2 className="text-primary">Poultry Value Chain:</TypographyH2>
 
             <TypographyH4>Blockchain Traceability for Poultry and Meat Value Chain - </TypographyH4>
             <TypographyP className="!m-0">
@@ -545,7 +552,7 @@ export default function ValueChainView() {
               <li>
                 <strong>Digital Supply Chain Footprint:&nbsp;</strong>
                 <span>
-                  End-to-end transparency establishes a digital record of the product's journey,
+                  End-to-end transparency establishes a digital record of the product&apos;s journey,
                   opening up new opportunities for farmers, such as premium markets or access to
                   financing.
                 </span>
@@ -553,8 +560,10 @@ export default function ValueChainView() {
             </ul>
           </Section>
 
+          <Separator className="mt-10" />
+
           <Section>
-            <TypographyH2>Seafood Value Chain:</TypographyH2>
+            <TypographyH2 className="text-primary">Seafood Value Chain:</TypographyH2>
 
             <TypographyH4>Blockchain Traceability for Seafood Value Chain - </TypographyH4>
             <TypographyP className="!m-0">
@@ -692,8 +701,10 @@ export default function ValueChainView() {
             </ul>
           </Section>
 
+          <Separator className="mt-10" />
+
           <Section>
-            <TypographyH2>Seed Value Chain:</TypographyH2>
+            <TypographyH2 className="text-primary">Seed Value Chain:</TypographyH2>
 
             <TypographyH4>Blockchain Traceability for Seed Value Chain - </TypographyH4>
             <TypographyP className="!m-0">
@@ -826,6 +837,8 @@ export default function ValueChainView() {
               </li>
             </ul>
           </Section>
+
+          <Separator className="mt-10" />
         </section>
       </Template>
     </>
