@@ -40,7 +40,7 @@ export function CustomCarousel({ data, carouselType }: CustomCarouselProps) {
       plugins={[AutoPlay({ delay: 4000 })]}
       className="w-full -mt-3"
     >
-      <CarouselContent className="py-8">
+      <CarouselContent className="py-8 w-72 sm:w-full">
         {DATA.map((item, index) => (
           <CarouselItem
             key={item + "_" + index}
@@ -54,10 +54,10 @@ export function CustomCarousel({ data, carouselType }: CustomCarouselProps) {
               onMouseEnter={() => setIsHover(index + 1)}
               onMouseLeave={() => setIsHover(0)}
             >
-              <Card className="rounded-none border-none shadow-xl rounded-tl-3xl rounded-br-3xl transition-all duration-300 line-clamp-2 hover:line-clamp-none">
+              <Card className="rounded-none border-none shadow-xl rounded-tl-3xl rounded-br-3xl transition-all duration-300 line-clamp-2 hover:line-clamp-none max-w-full">
                 <CardContent
                   className={cn(
-                    "flex flex-col gap-4 items-center justify-center text-center p-6",
+                    "flex flex-col gap-4 items-center justify-center text-center p-6 max-w-full",
                     carouselType === "benefits" ? "aspect-[3/2]" : "aspect-square"
                   )}
                 >

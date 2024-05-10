@@ -39,14 +39,14 @@ export default function HomeBenefits() {
       <div className="px-0 py-4 flex justify-center mt-8">
         {/* <CustomCarousel data={BENEFITS} /> */}
         <Tabs defaultValue="Supply Chain" className="w-full flex flex-col">
-          <TabsList className="grid grid-cols-3 w-1/2 self-center h-fit bg-primary shadow-xl p-2">
-            <TabsTrigger className="px-6 py-3 text-white data-[state=active]:shadow-xl" value="Supply Chain">
+          <TabsList className="flex flex-col items-center sm:grid sm:grid-cols-3 w-full sm:w-5/6 lg:w-1/2 self-center h-fit bg-primary shadow-xl p-2">
+            <TabsTrigger className="px-6 py-3 text-white data-[state=active]:shadow-xl w-full" value="Supply Chain">
               <TypographyH3>Supply Chain</TypographyH3>
             </TabsTrigger>
-            <TabsTrigger className="px-6 py-3 text-white data-[state=active]:shadow-xl" value="Brand Story">
+            <TabsTrigger className="px-6 py-3 text-white data-[state=active]:shadow-xl w-full" value="Brand Story">
               <TypographyH3>Brand Story</TypographyH3>
             </TabsTrigger>
-            <TabsTrigger className="px-6 py-3 text-white data-[state=active]:shadow-xl" value="Engagement">
+            <TabsTrigger className="px-6 py-3 text-white data-[state=active]:shadow-xl w-full" value="Engagement">
               <TypographyH3>Engagement</TypographyH3>
             </TabsTrigger>
           </TabsList>
