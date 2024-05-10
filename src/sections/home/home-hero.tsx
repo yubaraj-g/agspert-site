@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import { TypographyH1, TypographyH3 } from "@/components/typography";
 import { Button } from "@/components/ui/button";
@@ -116,7 +117,11 @@ export default function HomeHero() {
             </TypographyH3>
           </motion.div>
 
-          <Button className="w-fit rounded-none shadow-xl rounded-tl-xl rounded-br-xl">Request Demo</Button>
+          <Link href={"#contact-us"}>
+            <Button className="w-fit rounded-none shadow-xl rounded-tl-xl rounded-br-xl">
+              Request Demo
+            </Button>
+          </Link>
         </div>
 
         <div className="flex w-full lg:w-1/2 h-fit lg:min-h-72 lg:h-fit justify-center items-center shadow-2xl bg-transparent rounded-3xl">
