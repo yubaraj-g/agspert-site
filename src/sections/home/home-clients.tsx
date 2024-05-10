@@ -7,14 +7,15 @@ import { TypographyH2 } from "@/components/typography";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
-import { _partners, PartnersType } from "@/assets/partners";
+import { _clients } from "@/assets/clients";
+import { PartnersType } from "@/assets/partners";
 
-export default function HomePartners() {
-  const data: PartnersType[] = [..._partners];
+export default function HomeClients() {
+  const data: PartnersType[] = [..._clients];
 
   return (
     <div className="w-full flex flex-col items-center gap-4 min-h-36 lg:h-fit pt-4">
-      <TypographyH2>Partners</TypographyH2>
+      <TypographyH2>Clients</TypographyH2>
 
       <div className="flex grow w-full">
         <Carousel

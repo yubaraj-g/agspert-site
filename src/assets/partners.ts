@@ -3,7 +3,7 @@ export type PartnersType = {
   alt: string;
 };
 
-export const partners: PartnersType[] = [
+export const _partners: PartnersType[] = [
   {
     image: "/images/Access.jpg",
     alt: "access",

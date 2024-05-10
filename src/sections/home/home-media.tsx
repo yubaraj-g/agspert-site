@@ -7,15 +7,15 @@ import { TypographyH2 } from "@/components/typography";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
-import { support } from "@/assets/support";
+import { _media } from "@/assets/media";
 import { PartnersType } from "@/assets/partners";
 
 export default function HomeMedia() {
-  const data: PartnersType[] = [...support];
+  const data: PartnersType[] = [..._media];
 
   return (
     <div className="w-full flex flex-col items-center gap-4 min-h-36 lg:h-fit pt-4">
-      <TypographyH2>Supported By</TypographyH2>
+      <TypographyH2>Media</TypographyH2>
 
       <div className="flex grow w-full">
         <Carousel

@@ -7,11 +7,13 @@ import HomeBenefits from "../home-benefits";
 // import HomeAbout from "../home-about";
 import HomeContact from "../home-contact";
 import HomeMap from "../home-map";
-import HomeMedia from "../home-media";
+import HomeSupportedBy from "../home-supported-by";
 import HomePartners from "../home-partners";
 import HomeScanQR from "../home-scan-qr";
 import HomeWhyAGSpert from "../home-why-agspert";
 import Template from "@/layouts/template";
+import HomeMedia from "../home-media";
+import HomeClients from "../home-clients";
 
 // const HomeWebappFeatures = lazy(() => import("../home-webapp"));
 
@@ -42,11 +44,19 @@ export default function HomeView() {
         </Template>
 
         <Template>
+          <HomeMedia />
+        </Template>
+
+        <Template>
           <HomeWhyAGSpert />
         </Template>
 
         <Template>
-          <HomeMedia />
+          <HomeClients />
+        </Template>
+
+        <Template>
+          <HomeSupportedBy />
         </Template>
 
         {/* <Template>
