@@ -18,7 +18,7 @@ export default function NavMobile() {
   return (
     <>
       <Link href={"/"}>
-        <Image src="/agspert-logo.png" alt="agspert" width="200" height="120" />
+        <Image src="/images/agspert-logo.png" alt="agspert" width="200" height="120" />
       </Link>
 
       <Button variant="ghost" onClick={() => setIsNav((prev) => !prev)}>
