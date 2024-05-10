@@ -6,7 +6,7 @@ export default function HomeMap() {
       <TypographyH2>Where to find us?</TypographyH2>
 
       <div
-        className="flex grow w-full shadow-2xl shadow-primary p-3 lg:p-8 rounded-tl-3xl rounded-br-3xl"
+        className="flex grow w-full shadow-2xl shadow-primary/40 p-3 lg:p-8 rounded-tl-3xl rounded-br-3xl"
         // style={{
         //   background: "linear-gradient(158deg, rgba(255, 255, 255,1) 25%, rgba(22,163,74,0.5) 100%)",
         // }}

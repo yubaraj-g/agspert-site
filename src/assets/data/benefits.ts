@@ -26,7 +26,7 @@ export const BENEFITS = [
   },
   {
     // heading: "Cost Savings",
-    heading: "Remove Downtime With Predictive Patterns",
+    heading: "Reduce Downtime With Predictive Patterns",
     details:
       "Save significantly on expenses with AgSpeak's low-cost and intuitive tools. Compared to traditional platforms and tools, our solution ensures maximum ROI for your business operations.",
   },

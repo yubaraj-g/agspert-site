@@ -9,7 +9,7 @@ export default function HomeWhyAGSpert() {
       <TypographyH2>Why Agspert</TypographyH2>
 
       <div className="px-0 py-4">
-        <CustomCarousel data={WHY} />
+        <CustomCarousel data={WHY} carouselType={"whyagsperts"} />
       </div>
     </div>
   );
