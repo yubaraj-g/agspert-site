@@ -1,19 +1,32 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import { motion } from "framer-motion";
+
 import Template from "@/layouts/template";
 import {
   TypographyH1,
   TypographyH2,
-  TypographyH3,
+  // TypographyH3,
   TypographyH4,
   TypographyLead,
   TypographyP,
-  TypographySmall,
+  // TypographySmall,
 } from "@/components/typography";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type MemberNames = "sid" | "akas" | "ros" | "dhri" | "";
 
 export default function AboutView() {
+  const [member, setMember] = useState<MemberNames>();
+
+  const showMore = (name: MemberNames, value: boolean) => {
+    if (value) setMember(name);
+    else setMember("");
+  };
+
   return (
     <Template>
       <section className="min-h-dvh flex flex-col items-center w-full gap-8">
@@ -83,6 +96,34 @@ export default function AboutView() {
                 <TypographyLead>
                   EXP - (7 yrs) - Ex-ICAR (Precision Engg./Material Sc.)
                 </TypographyLead>
+
+                <TypographyLead
+                  className={cn("!text-sm", member === "sid" ? "line-clamp-none" : "line-clamp-4")}
+                >
+                  I am a mechanical engineer with specialisation in materials science +
+                  nanotechnology. My family comes from a farming background, and I have been in
+                  touch with farmers ever since I was in school. After having completed my
+                  master&apos;s, I got the opportunity to work directly with farmers from the
+                  northeast as part of the farming projects of The Indian Council of Agricultural
+                  Research in New Delhi.
+                  <br />
+                  My job was mostly data analytics and project management but, for gathering data, I
+                  used to meet more than 100 farmers every week. The exposure helped me get an
+                  insightful understanding of core problems faced by the majority of farmers of
+                  India, which I eventually molded into AgSpert with help from my college Alumni
+                  Dhritiman.
+                </TypographyLead>
+
+                {member !== "sid" && (
+                  <Button variant="ghost" onClick={() => showMore("sid", true)}>
+                    Read More
+                  </Button>
+                )}
+                {member === "sid" && (
+                  <Button variant="ghost" onClick={() => showMore("", false)}>
+                    Read Less
+                  </Button>
+                )}
               </motion.div>
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative aspect-square w-56 lg:w-96 rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">
@@ -114,6 +155,30 @@ export default function AboutView() {
                 </TypographyH4>
 
                 <TypographyLead>EXP - (5 yrs) - Ex-SocGen (SD exec/ TL)</TypographyLead>
+
+                <TypographyLead
+                  className={cn("!text-sm", member === "akas" ? "line-clamp-none" : "line-clamp-4")}
+                >
+                  Introducing our Chief Technology Officer (CTO), AKASH SHARMA, the visionary leader
+                  behind our technological advancements and innovation. With a profound
+                  understanding of cutting-edge technologies and a passion for driving digital
+                  transformation, AKASH SHARMA spearheads our company&apos;s technical strategy,
+                  ensuring we remain at the forefront of our industry. With a proven track record of
+                  implementing scalable solutions and fostering a culture of innovation, AKASH
+                  SHARMA brings unparalleled expertise to our team, guiding us towards new heights
+                  of success in the digital landscape.
+                </TypographyLead>
+
+                {member !== "akas" && (
+                  <Button variant="ghost" onClick={() => showMore("akas", true)}>
+                    Read More
+                  </Button>
+                )}
+                {member === "akas" && (
+                  <Button variant="ghost" onClick={() => showMore("", false)}>
+                    Read Less
+                  </Button>
+                )}
               </motion.div>
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative aspect-square w-56 lg:w-96 rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">
@@ -141,7 +206,9 @@ export default function AboutView() {
 
                 <TypographyLead>EXP - (7 yrs) Ex-ITC || Ex-The Whole Truth Foods</TypographyLead>
 
-                <TypographyLead className="!text-sm">
+                <TypographyLead
+                  className={cn("!text-sm", member === "ros" ? "line-clamp-none" : "line-clamp-4")}
+                >
                   Hi, I am Roshan Dhakal, chief of operations here at Agspert. Coming from an FMCG
                   background I have had amazing opportunities in “ITC Ltd” to understand products
                   and distribution in depth. It has always fascinated me as to how a company of that
@@ -151,12 +218,23 @@ export default function AboutView() {
                   problem of transparency which consumers have no idea about. The very fact that
                   most companies are not transparent enough is highly concerning for me. I found
                   that the reason is that companies do not want to be transparent enough or simply
-                  don&apos;t have the tools or capability to be transparent. While I could do very little
-                  about the former I had a keen interest to be part of the solution for the later
-                  and that is when I came across Agspert. Agspert is not just a product but an idea
-                  of revolutionising the food industry and how consumers consume packet food
+                  don&apos;t have the tools or capability to be transparent. While I could do very
+                  little about the former I had a keen interest to be part of the solution for the
+                  later and that is when I came across Agspert. Agspert is not just a product but an
+                  idea of revolutionising the food industry and how consumers consume packet food
                   products and that idea fascinates me to the core.
                 </TypographyLead>
+
+                {member !== "ros" && (
+                  <Button variant="ghost" onClick={() => showMore("ros", true)}>
+                    Read More
+                  </Button>
+                )}
+                {member === "ros" && (
+                  <Button variant="ghost" onClick={() => showMore("", false)}>
+                    Read Less
+                  </Button>
+                )}
               </motion.div>
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative aspect-square w-56 lg:w-96 rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">
@@ -189,7 +267,9 @@ export default function AboutView() {
 
                 <TypographyLead>EXP - (5 yrs) Ex-ITC || Ex-The Whole Truth Foods</TypographyLead>
 
-                <TypographyLead className="!text-sm">
+                <TypographyLead
+                  className={cn("!text-sm", member === "dhri" ? "line-clamp-none" : "line-clamp-4")}
+                >
                   Hello, I am Dhritiman Talukdar, the co-founder of AgSpert Technologies Pvt. Ltd. I
                   have always been passionate about leveraging technology to solve real-world
                   problems. With a background in Computational Material Science, I bring a unique
@@ -204,14 +284,25 @@ export default function AboutView() {
                   enterprises and consumers with data-driven insights and cutting-edge tools that
                   enhance transparency and accountability in the food supply chain. We aim to create
                   a future where every stakeholder in the food industry, from farmers to consumers,
-                  has access to reliable and real-time information about their food&apos;s journey. This
-                  will not only increase efficiency and profitability but also foster trust and
+                  has access to reliable and real-time information about their food&apos;s journey.
+                  This will not only increase efficiency and profitability but also foster trust and
                   ensure food safety and quality. We are committed to making this vision a reality,
                   contributing to a more sustainable and secure global food system.
                   <br />I am excited about the journey ahead and I am confident that with our
                   talented team and our shared commitment to our vision, we will continue to
                   innovate and make a significant impact in the agri-tech sector.
                 </TypographyLead>
+
+                {member !== "dhri" && (
+                  <Button variant="ghost" onClick={() => showMore("dhri", true)}>
+                    Read More
+                  </Button>
+                )}
+                {member === "dhri" && (
+                  <Button variant="ghost" onClick={() => showMore("", false)}>
+                    Read Less
+                  </Button>
+                )}
               </motion.div>
               <div className="w-full lg:w-1/2 flex justify-center">
                 <div className="relative aspect-square w-56 lg:w-96 rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">

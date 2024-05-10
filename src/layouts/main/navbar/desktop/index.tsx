@@ -28,18 +28,37 @@ export default function NavDesktop() {
 
       <nav>
         <ul className="flex gap-4 items-center">
-          <li className={cn("border-b-2", pathname === "/value-chain" ? "border-primary" : "border-transparent")}>
+          <li
+            className={cn(
+              "border-b-2",
+              pathname === "/value-chain" ? "border-primary" : "border-transparent"
+            )}
+          >
             <Link
               href={"/value-chain"}
-              className={cn("font-semibold", pathname === "/value-chain" ? "text-primary" : "text-muted-foreground")}
+              className={cn(
+                "font-semibold hover:text-primary",
+                pathname === "/value-chain" ? "text-primary" : "text-muted-foreground"
+              )}
             >
               Value Chain
             </Link>
           </li>
-          <li className={cn("border-b-2", pathname === "/about-us" ? "border-primary" : "border-transparent")}>
-            <Link href={"/about-us"}
-            className={cn("font-semibold", pathname === "/about-us" ? "text-primary" : "text-muted-foreground")}
-            >About Us</Link>
+          <li
+            className={cn(
+              "border-b-2",
+              pathname === "/about-us" ? "border-primary" : "border-transparent"
+            )}
+          >
+            <Link
+              href={"/about-us"}
+              className={cn(
+                "font-semibold hover:text-primary",
+                pathname === "/about-us" ? "text-primary" : "text-muted-foreground"
+              )}
+            >
+              About Us
+            </Link>
           </li>
           <li className="relative">
             <Link href={"#"}>

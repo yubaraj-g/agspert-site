@@ -23,10 +23,8 @@ export default function Footer() {
       <Template>
         <div className="flex lg:flex-row flex-col items-center justify-between gap-6">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-start gap-3">
-            {/* <TypographyH1 className="text-primary">LOGO</TypographyH1> */}
             <Image src="/images/agspert-logo.png" alt="agspert" width="200" height="120" />
             <span># 5, Banphool Path, Hatigaon, Guwahati, Assam 781006</span>
-            {/* some social media links */}
 
             <div className="flex justify-center lg:justify-start gap-4 mt-6">
               <Link href="https://www.facebook.com/agspert/">
@@ -70,7 +68,17 @@ export default function Footer() {
                     variant="ghost"
                     className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
                   >
-                    <TypographySmall className="">Home</TypographySmall>
+                    <TypographySmall>Home</TypographySmall>
+                  </Button>
+                </Link>
+              </li>
+              <li>
+                <Link href={"/value-chain"}>
+                  <Button
+                    variant="ghost"
+                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
+                  >
+                    <TypographySmall>Value Chain</TypographySmall>
                   </Button>
                 </Link>
               </li>
@@ -80,7 +88,17 @@ export default function Footer() {
                     variant="ghost"
                     className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
                   >
-                    <TypographySmall className="">Mobile App</TypographySmall>
+                    <TypographySmall>Mobile App</TypographySmall>
+                  </Button>
+                </Link>
+              </li>
+              <li>
+                <Link href={"https://www.agspeak.in/"}>
+                  <Button
+                    variant="ghost"
+                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
+                  >
+                    <TypographySmall>Web App</TypographySmall>
                   </Button>
                 </Link>
               </li>
@@ -90,7 +108,7 @@ export default function Footer() {
                     variant="ghost"
                     className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
                   >
-                    <TypographySmall className="">Entreprise Login</TypographySmall>
+                    <TypographySmall>Privacy Policy</TypographySmall>
                   </Button>
                 </Link>
               </li>
@@ -100,17 +118,7 @@ export default function Footer() {
                     variant="ghost"
                     className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
                   >
-                    <TypographySmall className="">Privacy Policy</TypographySmall>
-                  </Button>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"}>
-                  <Button
-                    variant="ghost"
-                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
-                  >
-                    <TypographySmall className="">Terms of Service</TypographySmall>
+                    <TypographySmall>Terms of Service</TypographySmall>
                   </Button>
                 </Link>
               </li>
