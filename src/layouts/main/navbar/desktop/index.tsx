@@ -2,11 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
 
 export default function NavDesktop() {
   const [showChildren, setShowChildren] = useState<boolean>(false);
+
+  const pathname = usePathname();
 
   const buttonRef = useRef<any>(null);
 
@@ -24,16 +28,23 @@ export default function NavDesktop() {
 
       <nav>
         <ul className="flex gap-4 items-center">
-          <li>
-            <Link href={"/value-chain"}>Value Chain</Link>
+          <li className={cn("border-b-2", pathname === "/value-chain" ? "border-primary" : "border-transparent")}>
+            <Link
+              href={"/value-chain"}
+              className={cn("font-semibold", pathname === "/value-chain" ? "text-primary" : "text-muted-foreground")}
+            >
+              Value Chain
+            </Link>
           </li>
-          <li>
-            <Link href={"/about-us"}>About Us</Link>
+          <li className={cn("border-b-2", pathname === "/about-us" ? "border-primary" : "border-transparent")}>
+            <Link href={"/about-us"}
+            className={cn("font-semibold", pathname === "/about-us" ? "text-primary" : "text-muted-foreground")}
+            >About Us</Link>
           </li>
           <li className="relative">
             <Link href={"#"}>
               <Button
-                className="w-fit rounded-none shadow-xl rounded-tl-xl rounded-br-xl bg-transparent text-black hover:bg-black/5"
+                className="font-semibold w-fit rounded-none shadow-xl rounded-tl-xl rounded-br-xl bg-transparent text-black/70 hover:bg-black/5"
                 onMouseEnter={() => setShowChildren(true)}
                 // onMouseLeave={() => setShowChildren(false)}
               >
