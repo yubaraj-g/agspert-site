@@ -23,12 +23,12 @@ export default function NavDesktop() {
   return (
     <>
       <Link href={"/"}>
-        <Image src="/images/agspert-logo.png" alt="agspert" width="200" height="120" />
+        <Image src="/images/agspert-logo.png" alt="agspert" width="200" height="120" className="bg-transparent" />
       </Link>
 
       <nav>
         <ul className="flex gap-4 items-center">
-          <li
+          {/* <li
             className={cn(
               "border-b-2",
               pathname === "/value-chain" ? "border-primary" : "border-transparent"
@@ -38,12 +38,12 @@ export default function NavDesktop() {
               href={"/value-chain"}
               className={cn(
                 "font-semibold hover:text-primary",
-                pathname === "/value-chain" ? "text-primary" : "text-muted-foreground"
+                pathname === "/value-chain" ? "text-primary" : "text-foreground"
               )}
             >
               Value Chain
             </Link>
-          </li>
+          </li> */}
           <li
             className={cn(
               "border-b-2",
@@ -54,7 +54,7 @@ export default function NavDesktop() {
               href={"/about-us"}
               className={cn(
                 "font-semibold hover:text-primary",
-                pathname === "/about-us" ? "text-primary" : "text-muted-foreground"
+                pathname === "/about-us" ? "text-primary" : "text-foreground"
               )}
             >
               About Us

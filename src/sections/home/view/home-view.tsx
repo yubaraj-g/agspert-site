@@ -19,7 +19,7 @@ import HomeClients from "../home-clients";
 
 export default function HomeView() {
   return (
-    <main className="flex min-h-dvh flex-col items-center justify-between overflow-x-hidden">
+    <main className="flex min-h-dvh flex-col items-center justify-between overflow-x-hidden z-0 w-full">
       <MainLayout>
         <Template>
           <HomeHero />
@@ -39,20 +39,28 @@ export default function HomeView() {
           <HomeScanQR />
         </Template>
 
+        {/* <Template>
+          <HomePartners />
+        </Template>
+
+        <Template>
+          <HomeMedia />
+        </Template> */}
+
+        <Template>
+          <HomeWhyAGSpert />
+        </Template>
+
+        {/* <Template>
+          <HomeClients />
+        </Template> */}
+
         <Template>
           <HomePartners />
         </Template>
 
         <Template>
           <HomeMedia />
-        </Template>
-
-        <Template>
-          <HomeWhyAGSpert />
-        </Template>
-
-        <Template>
-          <HomeClients />
         </Template>
 
         <Template>

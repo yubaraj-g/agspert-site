@@ -29,7 +29,7 @@ export default function AboutView() {
 
   return (
     <Template>
-      <section className="min-h-dvh flex flex-col items-center w-full gap-8">
+      <section className="container min-h-dvh flex flex-col items-center w-full gap-8 mt-28">
         <Template className="w-full">
           <div className="relative h-32 lg:h-80 w-full flex justify-center items-center text-primary overflow-hidden">
             <div
@@ -85,9 +85,9 @@ export default function AboutView() {
           </TypographyP>
         </Template>
 
-        <Template>
+        {/* <Template>
           <TypographyH1 className="text-primary">FROM THE DESK OF THE CEO</TypographyH1>
-        </Template>
+        </Template> */}
         <div className="w-full mt-8">
           <Template>
             <div className="flex flex-col-reverse lg:flex-row gap-12">
@@ -110,33 +110,24 @@ export default function AboutView() {
                 <TypographyLead
                   className={cn("!text-sm", member === "sid" ? "line-clamp-none" : "line-clamp-4")}
                 >
-                  I am a mechanical engineer with specialisation in materials science +
-                  nanotechnology. My family comes from a farming background, and I have been in
-                  touch with farmers ever since I was in school. After having completed my
-                  master&apos;s, I got the opportunity to work directly with farmers from the
-                  northeast as part of the farming projects of The Indian Council of Agricultural
-                  Research in New Delhi.
-                  <br />
-                  My job was mostly data analytics and project management but, for gathering data, I
-                  used to meet more than 100 farmers every week. The exposure helped me get an
-                  insightful understanding of core problems faced by the majority of farmers of
-                  India, which I eventually molded into AgSpert with help from my college Alumni
-                  Dhritiman.
+                  A tech enthusiast and IITG BTech graduate, thrives on problem-solving. Passionate
+                  about leveraging technology, with an aim to revolutionize Indian agriculture with
+                  holistic solutions, driven by a vision for sustainability and efficiency.
                 </TypographyLead>
 
-                {member !== "sid" && (
+                {/* {member !== "sid" && (
                   <Button variant="ghost" onClick={() => showMore("sid", true)}>
                     Read More
                   </Button>
-                )}
-                {member === "sid" && (
+                )} */}
+                {/* {member === "sid" && (
                   <Button variant="ghost" onClick={() => showMore("", false)}>
                     Read Less
                   </Button>
-                )}
+                )} */}
               </motion.div>
               <div className="w-full lg:w-1/2 flex justify-center">
-                <div className="relative aspect-square w-56 lg:w-96 rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-square w-56 lg:w-96 rounded-xl overflow-hidden shadow-2xl">
                   <Image
                     src="/images/siddhartha-bora.jpg"
                     alt="CEO"
@@ -191,7 +182,7 @@ export default function AboutView() {
                 )}
               </motion.div>
               <div className="w-full lg:w-1/2 flex justify-center">
-                <div className="relative aspect-square w-56 lg:w-96 rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-square w-56 lg:w-96 rounded-xl overflow-hidden shadow-2xl">
                   <Image src="/images/AKASH SHARMA.jpg" alt="CEO" layout="fill" objectFit="cover" />
                 </div>
               </div>
@@ -247,7 +238,7 @@ export default function AboutView() {
                 )}
               </motion.div>
               <div className="w-full lg:w-1/2 flex justify-center">
-                <div className="relative aspect-square w-56 lg:w-96 rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-square w-56 lg:w-96 rounded-xl overflow-hidden shadow-2xl">
                   <Image
                     src="/images/ROSHAN DHAKAL.jpg"
                     alt="CEO"
@@ -315,7 +306,7 @@ export default function AboutView() {
                 )}
               </motion.div>
               <div className="w-full lg:w-1/2 flex justify-center">
-                <div className="relative aspect-square w-56 lg:w-96 rounded-tl-2xl rounded-br-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-square w-56 lg:w-96 rounded-xl overflow-hidden shadow-2xl">
                   <Image
                     src="/images/DHRITIMAN TALUKDAR.jpg"
                     alt="CEO"

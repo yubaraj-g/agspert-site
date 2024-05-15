@@ -8,13 +8,14 @@ import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carouse
 import { Card, CardContent } from "@/components/ui/card";
 
 import { _partners, PartnersType } from "@/assets/partners";
+import { _clients } from "@/assets/clients";
 
 export default function HomePartners() {
-  const data: PartnersType[] = [..._partners];
+  const data: PartnersType[] = [..._partners, ..._clients];
 
   return (
     <div className="w-full flex flex-col items-center gap-4 min-h-36 lg:h-fit pt-4">
-      <TypographyH2>Partners</TypographyH2>
+      <TypographyH2>Partners & Clients</TypographyH2>
 
       <div className="flex grow w-full">
         <Carousel

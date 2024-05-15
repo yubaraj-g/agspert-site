@@ -12,7 +12,7 @@ export default function ValueChainView() {
   return (
     <>
       <Template>
-        <section className="w-full flex flex-col items-center overflow-hidden">
+        <section className="container w-full flex flex-col items-center overflow-hidden mt-40">
           <TypographyH1 className="text-primary text-center">Agspeak - Value Chain</TypographyH1>
 
           <Section>

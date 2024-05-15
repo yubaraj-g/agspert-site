@@ -2,8 +2,15 @@
 
 import * as React from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
-export default function Template({ children, className }: { children: React.ReactNode, className?: string }) {
+export default function Template({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
     <React.Fragment>
       <motion.div
@@ -19,7 +26,7 @@ export default function Template({ children, className }: { children: React.Reac
           opacity: 1,
           y: 0,
         }}
-        className={className || ""}
+        className={cn("z-0", className ? className : "")}
       >
         {children}
       </motion.div>

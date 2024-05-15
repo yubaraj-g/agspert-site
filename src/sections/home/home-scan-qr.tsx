@@ -20,7 +20,7 @@ export default function HomeScanQR() {
 
   return (
     <Template>
-      <div className="w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-24 min-h-96 lg:h-[600px] pt-12">
+      <div className="container w-full flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12 lg:gap-24 min-h-96 lg:h-[600px] pt-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

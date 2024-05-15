@@ -9,7 +9,7 @@ type LayoutProps = {
 
 export default function MainLayout({ children }: LayoutProps) {
   return (
-    <div className="container flex flex-col">
+    <div className="flex flex-col w-full z-0">
       <Header />
 
       <div className="flex flex-col grow gap-6">{children}</div>

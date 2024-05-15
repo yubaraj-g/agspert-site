@@ -19,7 +19,7 @@ import { LineMdTwitterX } from "@/components/icons/x-twitter";
 
 export default function Footer() {
   return (
-    <div className="min-h-44 my-12 text-center pt-8">
+    <div className="container min-h-44 my-12 text-center pt-8">
       <Template>
         <div className="flex lg:flex-row flex-col items-center justify-between gap-6">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-start gap-3">
@@ -103,7 +103,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={"/"}>
+                <Link href={"https://agspert.com/privacy-policy"}>
                   <Button
                     variant="ghost"
                     className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
@@ -113,7 +113,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={"/"}>
+                <Link href={"https://agspert.com/terms-of-service"}>
                   <Button
                     variant="ghost"
                     className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"

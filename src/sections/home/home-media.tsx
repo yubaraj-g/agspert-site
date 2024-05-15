@@ -15,7 +15,7 @@ export default function HomeMedia() {
 
   return (
     <div className="w-full flex flex-col items-center gap-4 min-h-36 lg:h-fit pt-4">
-      <TypographyH2>Media</TypographyH2>
+      <TypographyH2>Media Recongnition</TypographyH2>
 
       <div className="flex grow w-full">
         <Carousel
