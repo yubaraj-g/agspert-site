@@ -3,7 +3,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 // import { Button } from "@/components/ui/button";
 
-import { /*TypographyH2,*/ TypographyH3 } from "@/components/typography";
+import { TypographyH2, TypographyH3 } from "@/components/typography";
 import { CustomCarousel } from "@/components/custom-carousel";
 
 import { BENEFITS } from "@/assets/data/benefits";
@@ -30,9 +30,10 @@ export default function HomeBenefits() {
   );
 
   return (
-    <div className="container w-full min-h-96 pt-4 flex flex-col items-center mt-12" id="benefits">
+    <div className="container w-full min-h-96 pt-4 flex flex-col items-center mt-6" id="benefits">
       {/* <TypographyH2>What does AGSpeak provide?</TypographyH2> */}
       {/* <TypographyH2>What&apos;s in it for you?</TypographyH2> */}
+      <TypographyH2>Grow your business with Agspeaks unique features</TypographyH2>
 
       <div className="px-0 py-4 flex justify-center mt-8 max-w-full">
         {/* <CustomCarousel data={BENEFITS} /> */}

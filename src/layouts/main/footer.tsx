@@ -23,7 +23,7 @@ export default function Footer() {
       <Template>
         <div className="flex lg:flex-row flex-col items-center justify-between gap-6">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-start gap-3">
-            <Image src="/images/agspert-logo.png" alt="agspert" width="200" height="120" />
+            <Image src="/images/agspert-logo-nobg.png" alt="agspert" width="200" height="120" />
             <span># 5, Banphool Path, Hatigaon, Guwahati, Assam 781006</span>
 
             <div className="flex justify-center lg:justify-start gap-4 mt-6">
@@ -103,7 +103,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={"https://agspert.com/privacy-policy"}>
+                <Link href={"/privacy-policy"}>
                   <Button
                     variant="ghost"
                     className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
@@ -113,7 +113,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={"https://agspert.com/terms-of-service"}>
+                <Link href={"/terms-of-service"}>
                   <Button
                     variant="ghost"
                     className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"

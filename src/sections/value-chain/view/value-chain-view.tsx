@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 
 import { TypographyH1, TypographyH2, TypographyH4, TypographyP } from "@/components/typography";
 import Template from "@/layouts/template";
@@ -12,8 +13,12 @@ export default function ValueChainView() {
   return (
     <>
       <Template>
-        <section className="container w-full flex flex-col items-center overflow-hidden mt-40">
-          <TypographyH1 className="text-primary text-center">Agspeak - Value Chain</TypographyH1>
+        <section className="container w-full flex flex-col items-center overflow-hidden mt-40 z-0">
+          <div className="w-full min-h-96 relative z-0">
+            <TypographyH1 className="text-primary text-center z-30 block">Agspeak - Value Chain</TypographyH1>
+            <Image src={'/images/industry-leadership.jpg'} alt="" layout="fill" className="-z-10" />
+            {/* <img loading="lazy" src="/images/industry-leadership.jpg" alt="" className="min-h-96" /> */}
+          </div>
 
           <Section>
             <TypographyH2 className="text-primary">Agri Value Chain:</TypographyH2>
@@ -337,8 +342,8 @@ export default function ValueChainView() {
                 <strong>Lack of solution to digitize the entire supply chain - </strong>
                 <br />
                 The current methods for managing the supply chain are either unverifiable or
-                susceptible to tampering. There isn&apos;t a single authoritative source available to
-                effectively manage and control the entire supply chain.
+                susceptible to tampering. There isn&apos;t a single authoritative source available
+                to effectively manage and control the entire supply chain.
               </TypographyP>
 
               <TypographyH4 className="mt-8">
@@ -346,10 +351,10 @@ export default function ValueChainView() {
               </TypographyH4>
               <TypographyP className="!m-0">
                 Agspeak offers a revolutionary blockchain-based platform for tracking livestock from
-                farm to fork. This system verifies everything, from the animal&apos;s origin and diet to
-                its antibiotic and heavy metal exposure. You can even track the processing and
-                distribution stages. This ensures food safety, regulatory compliance, and gives you
-                complete transparency throughout the supply chain.
+                farm to fork. This system verifies everything, from the animal&apos;s origin and
+                diet to its antibiotic and heavy metal exposure. You can even track the processing
+                and distribution stages. This ensures food safety, regulatory compliance, and gives
+                you complete transparency throughout the supply chain.
               </TypographyP>
             </div>
 
@@ -421,9 +426,9 @@ export default function ValueChainView() {
               <li>
                 <strong>Digital Supply Chain Footprint:&nbsp;</strong>
                 <span>
-                  End-to-end transparency establishes a digital record of the product&apos;s journey,
-                  opening up new opportunities for farmers, such as premium markets or access to
-                  financing.
+                  End-to-end transparency establishes a digital record of the product&apos;s
+                  journey, opening up new opportunities for farmers, such as premium markets or
+                  access to financing.
                 </span>
               </li>
             </ul>
@@ -552,9 +557,9 @@ export default function ValueChainView() {
               <li>
                 <strong>Digital Supply Chain Footprint:&nbsp;</strong>
                 <span>
-                  End-to-end transparency establishes a digital record of the product&apos;s journey,
-                  opening up new opportunities for farmers, such as premium markets or access to
-                  financing.
+                  End-to-end transparency establishes a digital record of the product&apos;s
+                  journey, opening up new opportunities for farmers, such as premium markets or
+                  access to financing.
                 </span>
               </li>
             </ul>

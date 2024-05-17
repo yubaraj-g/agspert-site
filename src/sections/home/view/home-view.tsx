@@ -13,7 +13,7 @@ import HomeScanQR from "../home-scan-qr";
 import HomeWhyAGSpert from "../home-why-agspert";
 import Template from "@/layouts/template";
 import HomeMedia from "../home-media";
-import HomeClients from "../home-clients";
+// import HomeClients from "../home-clients";
 
 // const HomeWebappFeatures = lazy(() => import("../home-webapp"));
 
@@ -36,6 +36,10 @@ export default function HomeView() {
         </Template> */}
 
         <Template>
+          <HomePartners />
+        </Template>
+
+        <Template>
           <HomeScanQR />
         </Template>
 
@@ -54,10 +58,6 @@ export default function HomeView() {
         {/* <Template>
           <HomeClients />
         </Template> */}
-
-        <Template>
-          <HomePartners />
-        </Template>
 
         <Template>
           <HomeMedia />

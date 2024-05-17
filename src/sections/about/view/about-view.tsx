@@ -266,7 +266,7 @@ export default function AboutView() {
                   DESIGNATION - DATA SCIENTIST
                 </TypographyH4>
 
-                <TypographyLead>EXP - (5 yrs) Ex-ITC || Ex-The Whole Truth Foods</TypographyLead>
+                <TypographyLead>EXP - (5 yrs)</TypographyLead>
 
                 <TypographyLead
                   className={cn("!text-sm", member === "dhri" ? "line-clamp-none" : "line-clamp-4")}

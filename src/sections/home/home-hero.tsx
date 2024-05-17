@@ -77,7 +77,7 @@ export default function HomeHero() {
   return (
     <div className="w-full relative z-0">
       {/* <div className="container w-full min-h-96 lg:h-[600px] pt-56 text-white flex flex-col gap-6 leading-10 !z-30 [text-shadow:_0_2px_2px_rgb(0_0_0_/_70%)]"> */}
-      <div className="container w-full min-h-96 lg:h-[700px] pt-56 pb-24 flex flex-col gap-6 leading-10 !z-30 -mt-10">
+      <div className="container w-full min-h-96 lg:h-[700px] pt-56 lg:pb-24 flex flex-col gap-6 leading-10 !z-30 -mt-10">
         <TypographyH1 className="flex-col">
           Make Your Agricultural Supply Chain
           {/* Organised, Efficient and Transparent  */}
@@ -126,7 +126,7 @@ export default function HomeHero() {
             </Link>
           </div>
 
-          <div className="flex w-full lg:w-1/2 h-fit lg:min-h-72 lg:h-fit justify-center items-center shadow-2xl bg-transparent rounded-3xl -mt-8">
+          <div className="flex w-full lg:w-1/2 h-fit lg:min-h-72 lg:h-fit justify-center items-center shadow-2xl bg-transparent rounded-3xl mt-14 lg:-mt-8">
             <video
               className="rounded-tl-3xl rounded-br-3xl h-full"
               src="/video/Intro-Video-AgSpeak.mp4"
