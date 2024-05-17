@@ -126,8 +126,8 @@ export default function HomeHero() {
             </Link>
           </div>
 
-          <div className="flex w-full lg:w-1/2 h-fit lg:min-h-72 lg:h-fit justify-center items-center shadow-2xl bg-transparent rounded-3xl mt-14 lg:-mt-8">
-            <video
+          <div className="flex w-full lg:w-1/2 h-fit lg:min-h-72 lg:h-fit justify-center items-center bg-transparent rounded-3xl mt-14 lg:-mt-8">
+            {/* <video
               className="rounded-tl-3xl rounded-br-3xl h-full"
               src="/video/Intro-Video-AgSpeak.mp4"
               controls
@@ -136,7 +136,26 @@ export default function HomeHero() {
               loop
               controlsList="nodownload noplaybackrate"
               disablePictureInPicture
-            />
+            /> */}
+            <div className="w-full h-fit lg:h-96 relative bg-transparent">
+              <img
+                src="/images/macbook-nobg.jpg"
+                alt="macbook"
+                className="-mt-12 sm:-mt-24 lg:-mt-24 xl:-mt-32 scale-125 sm:scale-105 lg:scale-125 bg-transparent"
+              />
+              <div className="xl:ml-[0px] xl:w-[calc(80%+2px)] xl:h-[88%] absolute xl:left-[51%] xl:-translate-x-[50%] xl:top-1/2 xl:-translate-y-1/2 ml-[3px] w-[calc(80%+1px)] left-1/2 -translate-x-1/2 top-[42%] -translate-y-1/2 sm:w-[calc(67%+3px)] sm:ml-[6px] lg:w-[calc(80%+1px)] lg:left-[calc(51%+1px)] lg:-ml-[1px] lg:top-[35%] lg:-translate-y-1/2">
+                <video
+                  className="w-full h-full"
+                  src="/video/Intro-Video-AgSpeak.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  controlsList="nodownload noplaybackrate"
+                  disablePictureInPicture
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
