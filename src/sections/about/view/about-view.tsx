@@ -160,14 +160,22 @@ export default function AboutView() {
                 <TypographyLead
                   className={cn("!text-sm", member === "akas" ? "line-clamp-none" : "line-clamp-4")}
                 >
-                  Introducing our Chief Technology Officer (CTO), AKASH SHARMA, the visionary leader
+                  {/* Introducing our Chief Technology Officer (CTO), AKASH SHARMA, the visionary leader
                   behind our technological advancements and innovation. With a profound
                   understanding of cutting-edge technologies and a passion for driving digital
                   transformation, AKASH SHARMA spearheads our company&apos;s technical strategy,
                   ensuring we remain at the forefront of our industry. With a proven track record of
                   implementing scalable solutions and fostering a culture of innovation, AKASH
                   SHARMA brings unparalleled expertise to our team, guiding us towards new heights
-                  of success in the digital landscape.
+                  of success in the digital landscape. */}
+                  Introducing myself, I am AKASH SHARMA, the Chief Technology Officer (CTO) of our
+                  esteemed organization. I am the visionary leader behind our technological
+                  advancements and innovation. With a profound understanding of cutting-edge
+                  technologies and a passion for driving digital transformation, I spearhead our
+                  company's technical strategy, ensuring we remain at the forefront of our industry.
+                  With a proven track record of implementing scalable solutions and fostering a
+                  culture of innovation, I bring unparalleled expertise to our team, guiding us
+                  towards new heights of success in the digital landscape.
                 </TypographyLead>
 
                 {member !== "akas" && (
