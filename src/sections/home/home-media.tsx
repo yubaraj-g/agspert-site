@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import AutoScroll from "embla-carousel-auto-scroll";
 
@@ -32,13 +33,26 @@ export default function HomeMedia() {
                 key={"partner_" + index}
                 className="max-w-[250px] rounded-none flex items-center cursor-pointer"
               >
-                <div className="p-1 hover:scale-105 transition-all flex items-center">
-                  <Card className="transition-all duration-300 w-fit h-fit bg-transparent border-none outline-none shadow-none">
-                    <CardContent className="flex items-center !p-0">
-                      <Image src={item.image} width={130} height={40} alt={item.alt} />
-                    </CardContent>
-                  </Card>
-                </div>
+                {item.link && (
+                  <Link href={item.link} target="_blank">
+                    <div className="p-1 hover:scale-105 transition-all flex items-center">
+                      <Card className="transition-all duration-300 w-fit h-fit bg-transparent border-none outline-none shadow-none">
+                        <CardContent className="flex items-center !p-0">
+                          <Image src={item.image} width={130} height={40} alt={item.alt} />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </Link>
+                )}
+                {!item.link && (
+                  <div className="p-1 hover:scale-105 transition-all flex items-center">
+                    <Card className="transition-all duration-300 w-fit h-fit bg-transparent border-none outline-none shadow-none">
+                      <CardContent className="flex items-center !p-0">
+                        <Image src={item.image} width={130} height={40} alt={item.alt} />
+                      </CardContent>
+                    </Card>
+                  </div>
+                )}
               </CarouselItem>
             ))}
           </CarouselContent>
