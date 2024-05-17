@@ -5,6 +5,7 @@ import Image from "next/image";
 import {
   // TypographyH1,
   TypographyH2,
+  TypographyH3,
   // TypographyH4,
   TypographyMuted,
   TypographySmall,
@@ -19,13 +20,99 @@ import { LineMdTwitterX } from "@/components/icons/x-twitter";
 
 export default function Footer() {
   return (
-    <div className="container min-h-44 my-12 text-center pt-8">
-      <Template>
-        <div className="flex lg:flex-row flex-col items-center justify-between gap-6">
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-start gap-3">
-            <Image src="/images/agspert-logo-nobg.png" alt="agspert" width="200" height="120" />
-            <span># 5, Banphool Path, Hatigaon, Guwahati, Assam 781006</span>
+    <div className="container min-h-56 my-12 text-center pt-8 h-full">
+      <Template className="h-full">
+        <div className="flex lg:flex-row flex-col items-start justify-between gap-6 h-full">
+          <div className="flex flex-col items-center justify-between lg:items-start text-center lg:text-start gap-3 h-full min-h-56">
+            <div className="flex flex-col gap-3">
+              <Image src="/images/agspert-logo-nobg.png" alt="agspert" width="200" height="120" />
+              <span># 5, Banphool Path, Hatigaon, Guwahati, Assam 781006</span>
+            </div>
 
+            <TypographyMuted>
+              Copyright ©2020-24 AgSpert - All Rights Reserved.
+            </TypographyMuted>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <TypographyH3 className="text-start pl-4">Explore</TypographyH3>
+
+            <ul className="flex flex-col gap-3 items-start w-full">
+              <li className="w-full">
+                <Link href={"/"} className="w-full">
+                  <Button
+                    variant="ghost"
+                    className="w-full border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl flex justify-start"
+                  >
+                    <TypographySmall>Home</TypographySmall>
+                  </Button>
+                </Link>
+              </li>
+              <li className="w-full">
+                <Link href={"/value-chain"} className="w-full">
+                  <Button
+                    variant="ghost"
+                    className="w-full border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl flex justify-start"
+                  >
+                    <TypographySmall>Value Chain</TypographySmall>
+                  </Button>
+                </Link>
+              </li>
+              <li className="w-full">
+                <Link href={"/privacy-policy"} className="w-full">
+                  <Button
+                    variant="ghost"
+                    className="w-full border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl flex justify-start"
+                  >
+                    <TypographySmall>Privacy Policy</TypographySmall>
+                  </Button>
+                </Link>
+              </li>
+              <li className="w-full">
+                <Link href={"/terms-of-service"} className="w-full">
+                  <Button
+                    variant="ghost"
+                    className="w-full border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl flex justify-start"
+                  >
+                    <TypographySmall>Terms of Service</TypographySmall>
+                  </Button>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <TypographyH3 className="text-start pl-4">Our Platform</TypographyH3>
+
+            <ul className="flex flex-col gap-3 items-start w-full">
+              <li className="w-full">
+                <Link
+                  href={"https://play.google.com/store/apps/details?id=com.agspeak.agspert"}
+                  className="w-full"
+                >
+                  <Button
+                    variant="ghost"
+                    className="w-full border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl flex justify-start"
+                  >
+                    <TypographySmall>Mobile App</TypographySmall>
+                  </Button>
+                </Link>
+              </li>
+              <li className="w-full">
+                <Link href={"https://www.agspeak.in/"} className="w-full">
+                  <Button
+                    variant="ghost"
+                    className="w-full border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl flex justify-start"
+                  >
+                    <TypographySmall>Web App</TypographySmall>
+                  </Button>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <TypographyH3 className="text-start">Social Links</TypographyH3>
             <div className="flex justify-center lg:justify-start gap-4 mt-6">
               <Link href="https://www.facebook.com/agspert/">
                 <FeFacebook
@@ -57,77 +144,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-
-          <div className="flex flex-col gap-3">
-            <TypographyH2>Explore</TypographyH2>
-
-            <ul className="flex md:flex-row flex-col gap-3">
-              <li>
-                <Link href={"/"}>
-                  <Button
-                    variant="ghost"
-                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
-                  >
-                    <TypographySmall>Home</TypographySmall>
-                  </Button>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/value-chain"}>
-                  <Button
-                    variant="ghost"
-                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
-                  >
-                    <TypographySmall>Value Chain</TypographySmall>
-                  </Button>
-                </Link>
-              </li>
-              <li>
-                <Link href={"https://play.google.com/store/apps/details?id=com.agspeak.agspert"}>
-                  <Button
-                    variant="ghost"
-                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
-                  >
-                    <TypographySmall>Mobile App</TypographySmall>
-                  </Button>
-                </Link>
-              </li>
-              <li>
-                <Link href={"https://www.agspeak.in/"}>
-                  <Button
-                    variant="ghost"
-                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
-                  >
-                    <TypographySmall>Web App</TypographySmall>
-                  </Button>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/privacy-policy"}>
-                  <Button
-                    variant="ghost"
-                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
-                  >
-                    <TypographySmall>Privacy Policy</TypographySmall>
-                  </Button>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/terms-of-service"}>
-                  <Button
-                    variant="ghost"
-                    className="border-l-2 border-b-2 border-transparent hover:border-green-250 hover:shadow-xl hover:border-b-2 hover:border-l-2 rounded-none rounded-tl-xl rounded-br-xl"
-                  >
-                    <TypographySmall>Terms of Service</TypographySmall>
-                  </Button>
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
-        <TypographyMuted className="mt-10">
-          Copyright ©2020-24 AgSpert - All Rights Reserved.
-        </TypographyMuted>
       </Template>
     </div>
   );
