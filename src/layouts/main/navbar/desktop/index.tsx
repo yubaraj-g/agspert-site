@@ -54,6 +54,22 @@ export default function NavDesktop() {
           <li
             className={cn(
               "border-b-2",
+              pathname === "/" ? "border-primary" : "border-transparent"
+            )}
+          >
+            <Link
+              href={"/"}
+              className={cn(
+                "font-semibold hover:text-primary",
+                pathname === "/" ? "text-primary" : "text-foreground"
+              )}
+            >
+              Home
+            </Link>
+          </li>
+          <li
+            className={cn(
+              "border-b-2",
               pathname === "/about-us" ? "border-primary" : "border-transparent"
             )}
           >

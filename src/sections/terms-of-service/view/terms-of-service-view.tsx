@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 
 import { TypographyH1, TypographyH4, TypographyP } from "@/components/typography";
 import Template from "@/layouts/template";
@@ -14,11 +15,23 @@ export default function TermsOfServiceView() {
 
           <TypographyP>
             This terms of use document (together with the documents referred to in it) tells you the
-            terms of use on which you may make use of our website www.agspert.com or
-            www.site.agspert.com and the interactive features of our web application, mobile app
-            “AgSpeak” and services (“collective referred as our site”), whether as a guest or a
-            registered user. Use of our site includes accessing, browsing, or registering to use our
-            site.
+            terms of use on which you may make use of our website&nbsp;
+            <Link
+              className="text-primary hover:text-foreground hover:underline"
+              href="https://www.agspert.com"
+            >
+              www.agspert.com
+            </Link>
+            &nbsp;or&nbsp;
+            <Link
+              className="text-primary hover:text-foreground hover:underline"
+              href="https://www.site.agspert.com"
+            >
+              www.site.agspert.com
+            </Link>{" "}
+            and the interactive features of our web application, mobile app “AgSpeak” and services
+            (“collective referred as our site”), whether as a guest or a registered user. Use of our
+            site includes accessing, browsing, or registering to use our site.
           </TypographyP>
 
           <TypographyP>
@@ -30,29 +43,35 @@ export default function TermsOfServiceView() {
 
           <TypographyH4>OTHER APPLICABLE TERMS</TypographyH4>
 
-          <TypographyP className="!mt-0">
-            These terms of use refer to the following additional terms, which also apply to your use
-            of our service:
+          <div>
+            <TypographyP className="!mt-0">
+              These terms of use refer to the following additional terms, which also apply to your
+              use of our service:
+            </TypographyP>
             <ul className="list-disc ml-6">
               <li>
-                Our Privacy policy, which sets out the terms on which we process any personal data
-                we collect from you, or that you provide to us. By using our site, you consent to
-                such processing and you warrant that all data provided by you is accurate.
+                <TypographyP className="!mt-0">
+                  Our Privacy policy, which sets out the terms on which we process any personal data
+                  we collect from you, or that you provide to us. By using our site, you consent to
+                  such processing and you warrant that all data provided by you is accurate.
+                </TypographyP>
               </li>
               <li>
-                Our acceptable use policy, which sets out the permitted uses and prohibited uses of
-                our site. When using our site, you must comply with this Acceptable Use Policy.
+                <TypographyP className="!mt-0">
+                  Our acceptable use policy, which sets out the permitted uses and prohibited uses
+                  of our site. When using our site, you must comply with this Acceptable Use Policy.
+                </TypographyP>
               </li>
               <li>Our cookie policy, which sets out information about the cookies on our site.</li>
             </ul>
-          </TypographyP>
+          </div>
 
-          {_termsData.map((item, i) => (
-            <>
-              <TypographyH4 key={i}>{item.title}</TypographyH4>
+          {_termsData.map((item) => (
+            <React.Fragment key={item.title}>
+              <TypographyH4>{item.title}</TypographyH4>
 
               <TypographyP className="!mt-0">{item.desc}</TypographyP>
-            </>
+            </React.Fragment>
           ))}
 
           <TypographyH4>LIMITATION OF OUR LIABILITY</TypographyH4>
@@ -121,23 +140,29 @@ export default function TermsOfServiceView() {
 
           <TypographyH4>RIGHTS YOU LICENCE</TypographyH4>
 
-          <TypographyP className="!mt-0">
-            When you upload or post content to our site, you grant the following licenses:
+          <div>
+            <TypographyP className="!mt-0">
+              When you upload or post content to our site, you grant the following licenses:
+            </TypographyP>
             <ul className="list-disc ml-6">
               <li>
-                To us: a perpetual, worldwide, non-exclusive, royalty-free, transferable license to
-                use, reproduce, distribute, prepare derivative works of, or display that user
-                generated content in connection with our services and the promotion of our services
-                and across different media
+                <TypographyP className="!mt-0">
+                  To us: a perpetual, worldwide, non-exclusive, royalty-free, transferable license
+                  to use, reproduce, distribute, prepare derivative works of, or display that user
+                  generated content in connection with our services and the promotion of our
+                  services and across different media
+                </TypographyP>
               </li>
               <li>
-                To other users of our site or to third parties: a perpetual, worldwide,
-                non-exclusive, royalty-free, transferable license to use, reproduce, distribute,
-                prepare derivative works of, or display that user generated content for their
-                purposes or in accordance with the functionality of our site
+                <TypographyP className="!mt-0">
+                  To other users of our site or to third parties: a perpetual, worldwide,
+                  non-exclusive, royalty-free, transferable license to use, reproduce, distribute,
+                  prepare derivative works of, or display that user generated content for their
+                  purposes or in accordance with the functionality of our site
+                </TypographyP>
               </li>
             </ul>
-          </TypographyP>
+          </div>
 
           <TypographyH4>VIRUSES</TypographyH4>
 

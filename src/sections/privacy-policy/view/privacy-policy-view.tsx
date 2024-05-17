@@ -1,8 +1,8 @@
 import * as React from "react";
+import Link from "next/link";
 
 import { TypographyH1, TypographyH2, TypographyH4, TypographyP } from "@/components/typography";
 import Template from "@/layouts/template";
-import { Separator } from "@/components/ui/separator";
 
 export default function TermsOfServiceView() {
   return (
@@ -18,9 +18,9 @@ export default function TermsOfServiceView() {
               <TypographyH4>Information you give us: </TypographyH4>
 
               <TypographyP className="!mt-0 ml-4">
-                You may give us information about you on our website
-                <a href="https://www.agspert.com">www.agspert.com</a> or&nbsp;
-                <a href="https://site.agspert.com">https://site.agspert.com</a> or via the
+                You may give us information about you on our website&nbsp;
+                <Link className="text-primary hover:text-foreground hover:underline" href="https://www.agspert.com">www.agspert.com</Link> or&nbsp;
+                <Link className="text-primary hover:text-foreground hover:underline" href="https://site.agspert.com">https://site.agspert.com</Link> or via the
                 interactive features of our web application and mobile app &quot;AgSpeak&quot; and services
                 (&quot;our site&quot;), or by corresponding with us by phone, SMS, e-mail or otherwise. This
                 includes information you provide when you register to use our site, subscribe to our
