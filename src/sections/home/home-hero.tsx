@@ -75,9 +75,14 @@ export default function HomeHero() {
   );
 
   return (
-    <div className="w-full relative z-0">
+    <div
+      className="w-full relative z-0 !bg-cover bg-no-repeat"
+      // style={{
+      //   background: "url(/images/organic-plantations-min.jpg)",
+      // }}
+    >
       {/* <div className="container w-full min-h-96 lg:h-[600px] pt-56 text-white flex flex-col gap-6 leading-10 !z-30 [text-shadow:_0_2px_2px_rgb(0_0_0_/_70%)]"> */}
-      <div className="container w-full min-h-96 lg:h-[700px] pt-56 lg:pb-24 flex flex-col gap-6 leading-10 !z-30 -mt-10">
+      <div className="container w-full min-h-96 lg:h-[830px] pt-56 lg:pb-56 flex flex-col gap-6 leading-10 !z-30 -mt-10">
         <TypographyH1 className="flex-col">
           Make Your Agricultural Supply Chain
           {/* Organised, Efficient and Transparent  */}
@@ -120,7 +125,7 @@ export default function HomeHero() {
             </motion.div>
 
             <Link href={"#contact-us"}>
-              <Button className="w-fit rounded-none shadow-xl rounded-tl-xl rounded-br-xl">
+              <Button className="w-fit rounded-none shadow-2xl rounded-tl-2xl rounded-br-2xl mt-8 text-xl font-bold tracking-wide p-6">
                 Request Demo
               </Button>
             </Link>

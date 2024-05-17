@@ -172,7 +172,7 @@ export default function AboutView() {
                   esteemed organization. I am the visionary leader behind our technological
                   advancements and innovation. With a profound understanding of cutting-edge
                   technologies and a passion for driving digital transformation, I spearhead our
-                  company's technical strategy, ensuring we remain at the forefront of our industry.
+                  company&apos;s technical strategy, ensuring we remain at the forefront of our industry.
                   With a proven track record of implementing scalable solutions and fostering a
                   culture of innovation, I bring unparalleled expertise to our team, guiding us
                   towards new heights of success in the digital landscape.
