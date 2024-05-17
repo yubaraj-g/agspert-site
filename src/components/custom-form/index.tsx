@@ -26,6 +26,14 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Email is compulsory.",
   }),
+  phone: z
+    .string()
+    .refine((val) => !isNaN(Number(val)), {
+      message: "Phone number must be a number",
+    })
+    .refine((val) => val.length === 10, {
+      message: "Phone number must be exactly 10 digits long",
+    }),
   message: z.string().min(1, {
     message: "Message can not be empty",
   }),
@@ -37,21 +45,37 @@ export default function CustomForm() {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       message: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    const bodyData = { ...values };
+
+    try {
+      const res = await fetch(`/api/clients/`, {
+        method: "POST",
+        body: JSON.stringify(bodyData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+
+    // console.log(values, baseUrl);
   }
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-8 bg-white p-6 h-full shadow-2xl rounded-tl-3xl shadow-primary/40 rounded-br-3xl"
+        className="space-y-8 bg-white p-8 h-full shadow-2xl rounded-tl-3xl shadow-primary/40 rounded-br-3xl"
       >
         <Template>
           <FormField
@@ -59,10 +83,10 @@ export default function CustomForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel className="text-lg">Name</FormLabel>
                 <FormControl>
                   <Input
-                    className="rounded-none shadow-none rounded-tl-xl rounded-br-xl"
+                    className="rounded-none shadow-none rounded-tl-xl rounded-br-xl text-lg h-12 px-4"
                     placeholder="Enter your name here"
                     {...field}
                   />
@@ -94,10 +118,10 @@ export default function CustomForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel className="text-lg">Email</FormLabel>
                 <FormControl>
                   <Input
-                    className="rounded-none shadow-none rounded-tl-xl rounded-br-xl"
+                    className="rounded-none shadow-none rounded-tl-xl rounded-br-xl text-lg h-12 px-4"
                     placeholder="Enter your email id here"
                     {...field}
                   />
@@ -126,18 +150,18 @@ export default function CustomForm() {
         >
           <FormField
             control={form.control}
-            name="message"
+            name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel className="text-lg">Phone No.</FormLabel>
                 <FormControl>
-                  <Textarea
-                    className="rounded-none shadow-none max-h-28 rounded-tl-xl rounded-br-xl"
-                    placeholder="Enter your message here..."
+                  <Input
+                    className="rounded-none shadow-none rounded-tl-xl rounded-br-xl text-lg h-12 px-4"
+                    placeholder="Enter your phone number here"
                     {...field}
                   />
                 </FormControl>
-                <FormDescription>Enter your message.</FormDescription>
+                {/* <FormDescription>Enter Your Phone No.</FormDescription> */}
                 <FormMessage />
               </FormItem>
             )}
@@ -152,7 +176,42 @@ export default function CustomForm() {
           transition={{
             ease: "easeInOut",
             duration: 0.75,
-            delay: 0.65,
+            delay: 0.75,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+        >
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-lg">Message</FormLabel>
+                <FormControl>
+                  <Textarea
+                    className="rounded-none shadow-none max-h-28 rounded-tl-xl rounded-br-xl text-lg h-12 px-4"
+                    placeholder="Enter your message here..."
+                    {...field}
+                  />
+                </FormControl>
+                <FormDescription className="text-base">Enter your message.</FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{
+            y: 20,
+            opacity: 0,
+          }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.75,
+            delay: 0.9,
           }}
           whileInView={{
             opacity: 1,
