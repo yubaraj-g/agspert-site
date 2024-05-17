@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import {
   // TypographyH1,
-  TypographyH2,
+  // TypographyH2,
   TypographyH3,
   // TypographyH4,
   TypographyMuted,
