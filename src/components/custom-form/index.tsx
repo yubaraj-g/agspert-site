@@ -19,6 +19,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Template from "@/layouts/template";
 
+import { toast } from "../ui/use-toast";
+
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
@@ -51,12 +53,14 @@ export default function CustomForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     const bodyData = { ...values };
 
     try {
-      const res = await fetch(`/api/clients/`, {
+      const res = await fetch(`${baseURL}/clients/`, {
         method: "POST",
         body: JSON.stringify(bodyData),
         headers: {
@@ -64,8 +68,18 @@ export default function CustomForm() {
         },
       });
       console.log(res);
+      toast({
+        title: "Success.",
+        description: "We have received your message.",
+      });
+      form.reset();
     } catch (error) {
       console.log(error);
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: "There was a unexpected problem. Please try again.",
+      });
     }
 
     // console.log(values, baseUrl);
