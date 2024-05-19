@@ -3,7 +3,7 @@ import { TypographyH2 } from "@/components/typography";
 export default function HomeMap() {
   return (
     <div className="w-full flex flex-col gap-8 lg:min-h-96 lg:h-[600px] pt-4">
-      <TypographyH2 className="container">Where to find us?</TypographyH2>
+      <TypographyH2 className="container text-center lg:text-start">Where to find us?</TypographyH2>
 
       <div
         className="flex grow w-full shadow-2xl shadow-primary/40"

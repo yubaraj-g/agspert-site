@@ -83,7 +83,7 @@ export default function HomeHero() {
     >
       {/* <div className="container w-full min-h-96 lg:h-[600px] pt-56 text-white flex flex-col gap-6 leading-10 !z-30 [text-shadow:_0_2px_2px_rgb(0_0_0_/_70%)]"> */}
       <div className="container w-full min-h-96 lg:h-[830px] pt-56 lg:pb-56 flex flex-col gap-6 leading-10 !z-30 -mt-10">
-        <TypographyH1 className="flex-col">
+        <TypographyH1 className="flex-col text-center lg:text-start">
           Make Your Agricultural Supply Chain
           {/* Organised, Efficient and Transparent  */}
           {/* <motion.span className="text-primary"> {text}</motion.span> */}{" "}
@@ -124,7 +124,7 @@ export default function HomeHero() {
               </TypographyH3>
             </motion.div>
 
-            <Link href={"#contact-us"}>
+            <Link href={"#contact-us"} className="flex self-center lg:self-start">
               <Button className="w-fit rounded-none shadow-2xl rounded-tl-2xl rounded-br-2xl mt-8 text-xl font-bold tracking-wide p-6">
                 Request Demo
               </Button>

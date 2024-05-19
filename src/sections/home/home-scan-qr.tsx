@@ -26,7 +26,7 @@ export default function HomeScanQR() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.4, delay: 0.15 }}
         >
-          <TypographyH1>Let&apos;s go on a journey, please scan QR</TypographyH1>
+          <TypographyH1 className="text-center lg:text-start">Let&apos;s go on a journey, please scan QR</TypographyH1>
         </motion.div>
 
         <motion.div

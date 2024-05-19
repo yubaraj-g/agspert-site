@@ -112,7 +112,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <TypographyH3 className="text-start">Social Links</TypographyH3>
+            <TypographyH3 className="text-center lg:text-start">Social Links</TypographyH3>
             <div className="flex justify-center lg:justify-start gap-4 mt-6">
               <Link href="https://www.facebook.com/agspert/">
                 <FeFacebook
