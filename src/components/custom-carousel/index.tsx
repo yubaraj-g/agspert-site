@@ -96,7 +96,7 @@ export function CustomCarousel({ data, carouselType }: CustomCarouselProps) {
                       </TypographyH2>
                       <TypographyP
                         className={cn(
-                          "transition-all duration-200 !mt-0 lg:line-clamp-2",
+                          "transition-all duration-200 !mt-0 line-clamp-none lg:line-clamp-2",
                           isHover === index + 1 ? "lg:line-clamp-none" : ""
                         )}
                       >
@@ -112,7 +112,7 @@ export function CustomCarousel({ data, carouselType }: CustomCarouselProps) {
                       </TypographyH2>
                       <TypographyP
                         className={cn(
-                          "transition-all duration-200 !mt-0 lg:line-clamp-2",
+                          "transition-all duration-200 !mt-0 line-clamp-none lg:line-clamp-2",
                           isHover === index + 1 ? "lg:line-clamp-none" : ""
                         )}
                       >
