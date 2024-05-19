@@ -35,7 +35,7 @@ export default function HomeBenefits() {
       {/* <TypographyH2>What&apos;s in it for you?</TypographyH2> */}
       <TypographyH2 className="text-center">Grow your business with Agspeaks unique features</TypographyH2>
 
-      <div className="px-0 py-4 flex justify-center mt-8 max-w-full">
+      <div className="px-0 py-4 flex justify-center mt-8 max-w-full lg:h-[820px]">
         {/* <CustomCarousel data={BENEFITS} /> */}
         <Template>
           <Tabs defaultValue="Brand Story" className="w-full flex flex-col">

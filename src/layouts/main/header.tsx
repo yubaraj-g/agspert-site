@@ -27,7 +27,7 @@ export default function Header() {
         initial={{ y: -40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ ease: "easeInOut", duration: 0.75 }}
-        className="fixed top-0 left-0 z-30 bg-white/60 backdrop-blur-md shadow-md min-h-28 flex items-center justify-between !w-screen self-stretch"
+        className="fixed top-0 left-0 z-30 bg-white/0 backdrop-blur-md shadow-md min-h-28 flex items-center justify-between !w-screen self-stretch"
       >
         <div className="container flex justify-between items-center">
           {isDesktop ? <NavDesktop /> : <NavMobile />}

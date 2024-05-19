@@ -7,7 +7,7 @@ export function TypographyH1({ children, className }: Props) {
   return (
     <h1
       className={
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl " + className || ""
+        "scroll-m-20 text-4xl font-extrabold tracking-tight xl:text-5xl " + className || ""
       }
     >
       {children}
@@ -27,7 +27,7 @@ export function TypographyH2({ children, className }: Props) {
 
 export function TypographyH3({ children, className }: Props) {
   return (
-    <h3 className={"scroll-m-20 text-xl lg:text-2xl font-semibold tracking-tight " + className || ""}>
+    <h3 className={"scroll-m-20 text-base sm:text-lg xl:text-2xl font-semibold tracking-tight " + className || ""}>
       {children}
     </h3>
   );

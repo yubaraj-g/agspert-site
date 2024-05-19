@@ -21,7 +21,7 @@ export default function NavMobile() {
         <Image src="/images/agspert-logo-nobg.png" alt="agspert" width="200" height="120" />
       </Link>
 
-      <Button variant="ghost" onClick={() => setIsNav((prev) => !prev)}>
+      <Button variant="ghost" className="text-primary" onClick={() => setIsNav((prev) => !prev)}>
         <Hamburger width="24" height="24" />
       </Button>
 

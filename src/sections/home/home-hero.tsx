@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 import { TypographyH1, TypographyH3 } from "@/components/typography";
+import { ArrowDownAnimated } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 
 // import useScreenSize from "@/hooks/use-screen-size";
@@ -76,14 +77,14 @@ export default function HomeHero() {
 
   return (
     <div
-      className="w-full relative z-0 !bg-cover bg-no-repeat"
+      className="w-full relative z-0 !bg-cover bg-no-repeat min-h-dvh h-fit mb-0 sm:-mb-12 xl:mb-12"
       // style={{
       //   background: "url(/images/organic-plantations-min.jpg)",
       // }}
     >
       {/* <div className="container w-full min-h-96 lg:h-[600px] pt-56 text-white flex flex-col gap-6 leading-10 !z-30 [text-shadow:_0_2px_2px_rgb(0_0_0_/_70%)]"> */}
-      <div className="container w-full min-h-96 lg:h-[830px] pt-56 lg:pb-56 flex flex-col gap-6 leading-10 !z-30 -mt-10">
-        <TypographyH1 className="flex-col text-center lg:text-start">
+      <div className="container w-full min-h-96 lg:h-[830px] pt-36 xl:pt-64 lg:pb-56 flex flex-col gap-6 leading-10 !z-30 -mt-0">
+        <TypographyH1 className="flex-col text-center lg:text-start text-white shadow-lg">
           Make Your Agricultural Supply Chain
           {/* Organised, Efficient and Transparent  */}
           {/* <motion.span className="text-primary"> {text}</motion.span> */}{" "}
@@ -95,8 +96,8 @@ export default function HomeHero() {
           Today
         </TypographyH1>
 
-        <div className="flex flex-col-reverse lg:flex-row w-full items-center gap-4 -mt-16">
-          <div className="flex flex-col gap-6 w-full lg:w-1/2">
+        <div className="flex flex-col-reverse lg:flex-row w-full items-center gap-0 lg:gap-4 -mt-16 text-white">
+          <div className="flex flex-col gap-0 lg:gap-6 w-full lg:w-1/2 -mt-8 sm:-mt-36 lg:mt-20">
             <motion.div
               initial={{ x: 20, opacity: 0 }}
               // animate={{ x: 0, opacity: 1 }}
@@ -104,7 +105,7 @@ export default function HomeHero() {
               transition={{ ease: "easeInOut", delay: 0.5, duration: 0.75 }}
               // transition={{ staggerChildren: 0.02 }}
             >
-              <TypographyH3>
+              <TypographyH3 className="text-center lg:text-start">
                 <motion.p
                   transition={{ staggerChildren: 0.02, ease: "easeInOut" }}
                   initial={{ opacity: 0 }}
@@ -131,18 +132,8 @@ export default function HomeHero() {
             </Link>
           </div>
 
-          <div className="flex w-full lg:w-1/2 h-fit lg:min-h-72 lg:h-fit justify-center items-center bg-transparent rounded-3xl mt-14 lg:-mt-8">
-            {/* <video
-              className="rounded-tl-3xl rounded-br-3xl h-full"
-              src="/video/Intro-Video-AgSpeak.mp4"
-              controls
-              autoPlay
-              muted
-              loop
-              controlsList="nodownload noplaybackrate"
-              disablePictureInPicture
-            /> */}
-            <div className="w-full h-fit lg:h-96 relative bg-transparent">
+          <div className="flex w-full lg:w-1/2 h-fit lg:min-h-72 lg:h-fit justify-center items-center bg-transparent rounded-3xl mt-14 sm:-mt-6 lg:-mt-8">
+            <div className="w-full h-fit lg:h-96 relative bg-transparent lg:scale-[0.8] lg:-mr-32 lg:-mt-32">
               <img
                 src="/images/macbook-nobg.jpg"
                 alt="macbook"
@@ -164,10 +155,10 @@ export default function HomeHero() {
           </div>
         </div>
       </div>
-      {/* <div className="absolute left-0 -top-16 flex w-full h-fit lg:min-h-72 lg:h-fit justify-center items-center shadow-2xl bg-transparent -z-10">
+      <div className="absolute left-0 -top-16 flex w-full h-full lg:min-h-72 lg:h-fit justify-center items-center bg-transparent -z-10 object-cover">
         <video
-          className="h-full w-full -z-20 self-stretch"
-          src="/video/Intro-Video-AgSpeak.mp4"
+          className="h-full w-full -z-20 self-stretch object-cover"
+          src="/video/hero-bg-720p.mp4"
           controls
           autoPlay
           muted
@@ -175,7 +166,10 @@ export default function HomeHero() {
           controlsList="nodownload noplaybackrate"
           disablePictureInPicture
         />
-      </div> */}
+        <div className="z-10 absolute text-white bottom-4 lg:bottom-8 xl:bottom-12 lg:left-1/2 lg:-translate-x-1/2 right-4 animate-bounce w-fit">
+          <ArrowDownAnimated width="40" height="40" />
+        </div>
+      </div>
     </div>
   );
 }

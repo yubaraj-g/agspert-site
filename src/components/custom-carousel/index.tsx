@@ -2,9 +2,11 @@
 
 import * as React from "react";
 import Image from "next/image";
-import AutoPlay from "embla-carousel-autoplay";
-import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+
+import { cn } from "@/lib/utils";
+
+import AutoPlay from "embla-carousel-autoplay";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -38,7 +40,11 @@ export function CustomCarousel({ data, carouselType }: CustomCarouselProps) {
       opts={{
         align: "start",
       }}
-      plugins={[AutoPlay({ delay: 4000 })]}
+      plugins={
+        carouselType !== "whyagsperts" && carouselType !== "benefits"
+          ? [AutoPlay({ delay: 4000 })]
+          : []
+      }
       className="w-full -mt-3"
     >
       <CarouselContent className="m-0 py-8 w-full lg:flex-row flex-col">
@@ -46,69 +52,73 @@ export function CustomCarousel({ data, carouselType }: CustomCarouselProps) {
           <CarouselItem
             key={item + "_" + index}
             className={cn(
-              "md:basis-1/2 rounded-none",
+              "md:basis-1/2 rounded-none w-full",
               carouselType === "benefits" ? "lg:basis-1/2" : "lg:basis-1/3"
             )}
           >
             <div
-              className="p-1 hover:scale-105 transition-all"
+              className="p-1 transition-all w-full"
               onMouseEnter={() => setIsHover(index + 1)}
               onMouseLeave={() => setIsHover(0)}
             >
-              <Card className="rounded-none border-none shadow-xl rounded-tl-3xl rounded-br-3xl transition-all duration-300 line-clamp-2 hover:line-clamp-none max-w-full">
+              <Card className="rounded-none border-none bg-transparent shadow-none rounded-tl-3xl rounded-br-3xl transition-all duration-300 line-clamp-2 hover:line-clamp-none max-w-full">
                 <CardContent className="flex flex-col gap-4 items-center justify-center text-center p-6 max-w-full relative aspect-square">
-                  {isHover === index + 1 ? null : (
-                    <motion.div
-                      initial={{
-                        y: 20,
-                        opacity: 0,
-                      }}
-                      transition={{
-                        ease: "easeInOut",
-                        duration: 0.75,
-                      }}
-                      whileInView={{
-                        opacity: 1,
-                        y: 0,
-                      }}
-                      className="w-full"
-                    >
-                      <div
-                        className={cn(
-                          "w-full h-40 overflow-hidden relative flex rounded-tl-2xl rounded-br-2xl",
-                          carouselType === "benefits" ? "sm:h-96 shadow-xl" : "sm:h-72"
-                        )}
-                      >
-                        <Image src={item.image} alt={item.heading} layout="fill" />
-                      </div>
-                      <TypographyH2 className={cn("transition-all duration-150 min-h-16", carouselType === "benefits" ? "mt-10" : "mt-6")}>
-                        {item.heading}
-                      </TypographyH2>
-                    </motion.div>
-                  )}
-                  {isHover === index + 1 ? (
-                    <TypographyP
+                  <motion.div
+                    initial={{
+                      y: 20,
+                      opacity: 0,
+                    }}
+                    transition={{
+                      ease: "easeInOut",
+                      duration: 0.75,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                    }}
+                    className="w-full"
+                  >
+                    <div
                       className={cn(
-                        "transition-all duration-200",
-                        isHover === index + 1 ? "line-clamp-none text-xl" : "line-clamp-2"
+                        "w-full h-40 overflow-hidden relative flex rounded-2xl border",
+                        carouselType === "benefits" ? "sm:h-96" : "sm:h-72",
+                        isHover === index + 1 ? "scale-[1.01] transition-all" : ""
                       )}
                     >
-                      {item.details}
-                    </TypographyP>
-                  ) : (
-                    isHover !== index + 1 &&
-                    carouselType === "benefits" && (
-                      <Template>
-                        <TypographyP
-                          className={cn(
-                            "transition-all duration-200",
-                            isHover === index + 1 ? "line-clamp-none" : "line-clamp-2"
-                          )}
-                        >
-                          {item.details}
-                        </TypographyP>
-                      </Template>
-                    )
+                      <Image src={item.image} alt={item.heading} layout="fill" />
+                    </div>
+                  </motion.div>
+
+                  {carouselType === "benefits" && (
+                    <>
+                      <TypographyH2 className="transition-all duration-150 min-h-16 mt-10">
+                        {item.heading}
+                      </TypographyH2>
+                      <TypographyP
+                        className={cn(
+                          "transition-all duration-200 !mt-0 lg:line-clamp-2",
+                          isHover === index + 1 ? "lg:line-clamp-none" : ""
+                        )}
+                      >
+                        {item.details}
+                      </TypographyP>
+                    </>
+                  )}
+
+                  {carouselType === "whyagsperts" && (
+                    <>
+                      <TypographyH2 className="transition-all duration-150 min-h-16 mt-6">
+                        {item.heading}
+                      </TypographyH2>
+                      <TypographyP
+                        className={cn(
+                          "transition-all duration-200 !mt-0 lg:line-clamp-2",
+                          isHover === index + 1 ? "lg:line-clamp-none" : ""
+                        )}
+                      >
+                        {item.details}
+                      </TypographyP>
+                    </>
                   )}
                 </CardContent>
               </Card>

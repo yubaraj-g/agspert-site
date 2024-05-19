@@ -4,8 +4,8 @@ import Template from "@/layouts/template";
 
 export default function HomeContact() {
   return (
-    <div className="container w-full flex flex-col gap-4 min-h-96 lg:h-fit pt-10" id="contact-us">
-      <TypographyH2 className="text-center lg:text-start">Get in touch</TypographyH2>
+    <div className="container w-full flex flex-col items-center gap-8 min-h-96 lg:h-fit pt-16" id="contact-us">
+      <TypographyH2>Get in touch</TypographyH2>
 
       <div className="flex lg:flex-row flex-col grow w-full gap-16">
         <div className="w-full lg:w-1/2 h-full flex items-start pt-24">

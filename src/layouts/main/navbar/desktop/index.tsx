@@ -53,7 +53,7 @@ export default function NavDesktop() {
           </li> */}
           <li
             className={cn(
-              "border-b-2",
+              "border-b-2 hover:border-primary",
               pathname === "/" ? "border-primary" : "border-transparent"
             )}
           >
@@ -69,7 +69,7 @@ export default function NavDesktop() {
           </li>
           <li
             className={cn(
-              "border-b-2",
+              "border-b-2 hover:border-primary",
               pathname === "/about-us" ? "border-primary" : "border-transparent"
             )}
           >
@@ -83,7 +83,7 @@ export default function NavDesktop() {
               About Us
             </Link>
           </li>
-          <li className="relative">
+          <li className="relative border-b-2 border-transparent hover:border-primary">
             <Link
               href={"#"}
               className="font-semibold hover:text-primary flex items-center"
@@ -99,7 +99,7 @@ export default function NavDesktop() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ ease: "easeIn", duration: 0.3 }}
-                className="absolute -bottom-8 left-0 bg-white shadow-lg p-4 top-10 flex flex-col gap-4 text-sm min-w-[7.5rem] h-fit"
+                className="absolute -bottom-8 left-0 bg-white shadow-lg top-8 flex flex-col text-sm min-w-[7.5rem] h-fit"
                 onMouseLeave={() => setShowChildren(false)}
               >
                 <Link href={"https://play.google.com/store/apps/details?id=com.agspeak.agspert"}>
@@ -107,7 +107,7 @@ export default function NavDesktop() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ ease: "easeIn", duration: 0.3, delay: 0.1 }}
-                    className="hover:text-primary hover:transition-all"
+                    className="hover:text-primary hover:transition-all px-4 py-2 hover:bg-primary hover:text-white"
                   >
                     Mobile App
                   </motion.li>
@@ -117,7 +117,7 @@ export default function NavDesktop() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ ease: "easeIn", duration: 0.3, delay: 0.2 }}
-                    className="hover:text-primary hover:transition-all"
+                    className="hover:text-primary hover:transition-all px-4 py-2 hover:bg-primary hover:text-white"
                   >
                     Web App
                   </motion.li>

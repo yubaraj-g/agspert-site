@@ -1,26 +1,42 @@
 import * as React from "react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 import { TypographyH1, TypographyH2, TypographyH4, TypographyP } from "@/components/typography";
-import Template from "@/layouts/template";
 import { Separator } from "@/components/ui/separator";
+import Template from "@/layouts/template";
 
-function Section({ children }: { children: React.ReactNode }) {
-  return <section className="flex flex-col items-center gap-6 w-full mt-10">{children}</section>;
+function Section({ children, className }: { children: React.ReactNode; className: string }) {
+  return (
+    <section
+      className={cn("flex flex-col items-center gap-6 w-full mt-10", className ? className : "")}
+    >
+      {children}
+    </section>
+  );
 }
 
 export default function ValueChainView() {
   return (
     <>
       <Template>
-        <section className="container w-full flex flex-col items-center overflow-hidden mt-40 z-0">
-          <div className="w-full min-h-96 relative z-0">
-            <TypographyH1 className="text-primary text-center z-30 block">Agspeak - Value Chain</TypographyH1>
-            <Image src={'/images/industry-leadership.jpg'} alt="" layout="fill" className="-z-10" />
+        <section className="w-full flex flex-col items-center overflow-hidden mt-0 z-0">
+          <div className="w-full h-[30rem] lg:h-[50rem] relative z-0 flex items-center justify-center">
+            <div className="w-fit h-fit bg-white/30 p-6 backdrop-blur-md rounded-xl">
+              <TypographyH1 className="text-white text-center z-30 block">
+                Agspeak - Value Chain
+              </TypographyH1>
+            </div>
+            <Image
+              src={"/images/industry-leadership.jpg"}
+              alt=""
+              layout="fill"
+              className="-z-10 opacity-80"
+            />
             {/* <img loading="lazy" src="/images/industry-leadership.jpg" alt="" className="min-h-96" /> */}
           </div>
 
-          <Section>
+          <Section className="container bg-white -mt-12 lg:-mt-56 z-0 pt-12 rounded-t-2xl">
             <TypographyH2 className="text-primary">Agri Value Chain:</TypographyH2>
 
             <TypographyH4>Blockchain Traceability for Agriculture - </TypographyH4>
@@ -161,7 +177,7 @@ export default function ValueChainView() {
 
           <Separator className="mt-10" />
 
-          <Section>
+          <Section className="container">
             <TypographyH2 className="text-primary">Dairy Value Chain:</TypographyH2>
             <TypographyH4>Blockchain Traceability for the Dairy Value Chain - </TypographyH4>
             <TypographyP>
@@ -310,7 +326,7 @@ export default function ValueChainView() {
 
           <Separator className="mt-10" />
 
-          <Section>
+          <Section className="container">
             <TypographyH2 className="text-primary">Livestock Value Chain:</TypographyH2>
             <TypographyH4>Blockchain Traceability for the Livestock Value Chain - </TypographyH4>
 
@@ -436,7 +452,7 @@ export default function ValueChainView() {
 
           <Separator className="mt-10" />
 
-          <Section>
+          <Section className="container">
             <TypographyH2 className="text-primary">Poultry Value Chain:</TypographyH2>
 
             <TypographyH4>Blockchain Traceability for Poultry and Meat Value Chain - </TypographyH4>
@@ -567,7 +583,7 @@ export default function ValueChainView() {
 
           <Separator className="mt-10" />
 
-          <Section>
+          <Section className="container">
             <TypographyH2 className="text-primary">Seafood Value Chain:</TypographyH2>
 
             <TypographyH4>Blockchain Traceability for Seafood Value Chain - </TypographyH4>
@@ -708,7 +724,7 @@ export default function ValueChainView() {
 
           <Separator className="mt-10" />
 
-          <Section>
+          <Section className="container">
             <TypographyH2 className="text-primary">Seed Value Chain:</TypographyH2>
 
             <TypographyH4>Blockchain Traceability for Seed Value Chain - </TypographyH4>
