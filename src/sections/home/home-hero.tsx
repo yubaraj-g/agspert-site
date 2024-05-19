@@ -145,6 +145,7 @@ export default function HomeHero() {
                   src="/video/Intro-Video-AgSpeak.mp4"
                   controls
                   autoPlay
+                  playsInline
                   muted
                   loop
                   controlsList="nodownload noplaybackrate"
@@ -161,6 +162,7 @@ export default function HomeHero() {
           src="/video/hero-bg-720p.mp4"
           controls
           autoPlay
+          playsInline
           muted
           loop
           controlsList="nodownload noplaybackrate"
